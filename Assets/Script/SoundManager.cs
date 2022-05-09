@@ -5,40 +5,24 @@ using UnityEngine.UI;
 
 public class SoundManager : MonoBehaviour
 {
+    public static SoundManager instance;
+    public AudioClip uiButton;
 
-    [SerializeField] Slider volumeSlider;
+    private AudioSource audio;
+
     // Start is called before the first frame update
+    private void Awake() 
+    {
+        audio = GetComponent<AudioSource>();
+    }
+
+    public void UIClickSfx()
+    {
+        audio.PlayOneShot(uiButton);
+    }
+
     void Start()
     {
-        if(!PlayerPrefs.HasKey("musicVolume"))
-        {
-            PlayerPrefs.SetFloat("musicVolume", 1);
-            Load();
-        }
-        else 
-        {
-            Load();
-        }
-    }
 
-    public void ChangeVolume()
-    {
-        AudioListener.volume = volumeSlider.value;
-        Save();
-    }
-
-    private void Load()
-    {
-        volumeSlider.value = PlayerPrefs.GetFloat("musicVolume");
-    }
-
-    private void Save()
-    {
-        PlayerPrefs.SetFloat("musicVolume", volumeSlider.value);
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
