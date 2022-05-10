@@ -23,7 +23,6 @@ public class MainMenuManager : MonoBehaviour
         MainPanel.SetActive(false);
         SettingPanel.SetActive(true);
         CreditsPanel.SetActive(false);
-        SoundManager.instance.UIClickSfx();
     }
 
     public void CreditsButton()
@@ -31,7 +30,6 @@ public class MainMenuManager : MonoBehaviour
         MainPanel.SetActive(false);
         SettingPanel.SetActive(false);
         CreditsPanel.SetActive(true);
-        SoundManager.instance.UIClickSfx();
     }
 
     public void Back()
@@ -39,7 +37,6 @@ public class MainMenuManager : MonoBehaviour
         MainPanel.SetActive(true);
         SettingPanel.SetActive(false);
         CreditsPanel.SetActive(false);
-        SoundManager.instance.UIClickSfx();
     }
     // Update is called once per frame
     void Update()
