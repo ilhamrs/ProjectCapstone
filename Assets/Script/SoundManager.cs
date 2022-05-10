@@ -8,17 +8,17 @@ public class SoundManager : MonoBehaviour
     public static SoundManager instance;
     public AudioClip uiButton;
 
-    private AudioSource audio;
+    private AudioSource audioSfx;
 
     // Start is called before the first frame update
     private void Awake() 
     {
-        audio = GetComponent<AudioSource>();
+        audioSfx = GetComponent<AudioSource>();
     }
 
     public void UIClickSfx()
     {
-        audio.PlayOneShot(uiButton);
+        audioSfx.PlayOneShot(uiButton);
     }
 
     void Start()

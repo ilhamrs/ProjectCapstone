@@ -9,17 +9,28 @@ public class MainMenuManager : MonoBehaviour
     [Header("Main Menu Panel List")]
     public GameObject MainPanel;
     public GameObject SettingPanel;
+    public GameObject CreditsPanel;
     // Start is called before the first frame update
     void Start()
     {
         MainPanel.SetActive(true);
         SettingPanel.SetActive(false);
+        CreditsPanel.SetActive(false);
     }
 
     public void SettingButton()
     {
         MainPanel.SetActive(false);
         SettingPanel.SetActive(true);
+        CreditsPanel.SetActive(false);
+        SoundManager.instance.UIClickSfx();
+    }
+
+    public void CreditsButton()
+    {
+        MainPanel.SetActive(false);
+        SettingPanel.SetActive(false);
+        CreditsPanel.SetActive(true);
         SoundManager.instance.UIClickSfx();
     }
 
@@ -27,6 +38,7 @@ public class MainMenuManager : MonoBehaviour
     {
         MainPanel.SetActive(true);
         SettingPanel.SetActive(false);
+        CreditsPanel.SetActive(false);
         SoundManager.instance.UIClickSfx();
     }
     // Update is called once per frame
