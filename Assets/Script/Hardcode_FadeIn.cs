@@ -11,7 +11,7 @@ using UnityEngine.UI;
 public class Hardcode_FadeIn : MonoBehaviour
 {
     Image TargetImage;
-    float FadeSpeed = 1;
+    public float FadeSpeed = 1;
 
     void Awake()
     {

@@ -11,8 +11,8 @@ public class Hardcode_FadeOut : MonoBehaviour
 {
 
     Image TargetImage;
-    float FadeSpeed = 1;
-    float Delay = 3;
+    public float FadeSpeed = 1;
+    public float Delay = 3;
     bool StartFadeOut = false;
 
     void Awake()
