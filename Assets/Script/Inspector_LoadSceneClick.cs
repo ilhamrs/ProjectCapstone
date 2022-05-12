@@ -19,6 +19,12 @@ public class Inspector_LoadSceneClick : MonoBehaviour
         SceneManager.LoadScene(TargetScene);
     }
 
+    public void MoveToScene(string sceneName)
+    {
+        //melakukan perpindahan antar scene berdasarkan nama scene
+        SceneManager.LoadScene(sceneName);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
