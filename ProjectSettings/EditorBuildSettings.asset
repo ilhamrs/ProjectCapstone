@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/3. MainMenu.unity
     guid: 69f3f19cd8ae0eb46971fe511451c58c
   - enabled: 1
-    path: Assets/Scenes/4. Gameplay.unity
+    path: Assets/Scenes/4. ChapterSelection.unity
+    guid: 6442e497039459c49a4270ba1f48f5e9
+  - enabled: 1
+    path: Assets/Scenes/5. Gameplay.unity
     guid: d593cb83e181bbe4cbd6b6cf303e5630
   m_configObjects: {}

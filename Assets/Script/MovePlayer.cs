@@ -36,8 +36,8 @@ public class MovePlayer : MonoBehaviour
         {
             Jump();
         }
-        anim.SetBool("goWalk", horiz != 0);
-        anim.SetBool("grounded", grounded);
+        // anim.SetBool("goWalk", horiz != 0);
+        // anim.SetBool("grounded", grounded);
     }
 
     private void Jump()
