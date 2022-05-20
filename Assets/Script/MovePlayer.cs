@@ -8,6 +8,7 @@ public class MovePlayer : MonoBehaviour
     private bool grounded;
     [SerializeField] private float speed;
     private Animator anim;
+    public SpriteRenderer sprite;
     public float JumpForce;
     public AudioSource sfxJump;
 
