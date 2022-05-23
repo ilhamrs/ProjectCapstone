@@ -6,9 +6,9 @@ public class PlayerMove : MonoBehaviour
 {
 
 	[SerializeField] bool IsGrounded;
-	public bool isMoving;
+	//public bool isMoving;
 
-	public Animator anim;
+	//public Animator anim;
 	private Rigidbody2D rb;
 	public SpriteRenderer sprite;
 
@@ -17,10 +17,16 @@ public class PlayerMove : MonoBehaviour
 
 	public AudioSource sfxJump;
 
+	[SerializeField]
+	GameObject player;
+
+	public Vector2 Checkpoint;
+
     private void Start()
     {
 		rb = GetComponent<Rigidbody2D>();
-		anim = GetComponent<Animator>();
+		Checkpoint = rb.position;
+		//anim = GetComponent<Animator>();
 	}
 
     void Update()
@@ -30,16 +36,16 @@ public class PlayerMove : MonoBehaviour
 
 		if (horiz > 0.0f)
 		{
-			isMoving = true;
+			//isMoving = true;
 			sprite.flipX = true;
-			anim.SetBool("IsMove", true);
+			//anim.SetBool("IsMove", true);
 			transform.localScale = new Vector3(1, 1, 1);
 		}
 		else if (horiz < -0.01f)
 		{
-			isMoving = true;
+			//isMoving = true;
 			sprite.flipX = false;
-			anim.SetBool("IsMove", true);
+			//anim.SetBool("IsMove", true);
 			transform.localScale = new Vector3(-1, 1, 1);
 		}
 		if (Input.GetKey(KeyCode.Space) && IsGrounded)
@@ -72,23 +78,30 @@ public class PlayerMove : MonoBehaviour
 
 	private void Jump()
 	{
-		anim.SetTrigger("Jump");
+		//anim.SetTrigger("Jump");
 		rb.velocity = Vector2.up * JumpForce;
 		IsGrounded = false;
 		sfxJump.Play();
 	}
 
-	void OnCollisionStay2D(Collision2D collisionInfo)
+	void OnCollisionEnter2D(Collision2D collisionInfo)
 	{
 		if (collisionInfo.gameObject.tag == "Ground")
 		{
 			IsGrounded = true;
 		}
+		else 
+		{
+			IsGrounded = false;
+		}
 	}
 
-	void OnCollisionExit2D(Collision2D collisionInfo)
+	public void Respawn()
 	{
-		IsGrounded = false;
+		//ini dah bener, 0.1f biar jeda spawn karakternya ga keliatan
+		Destroy(gameObject, 0.1f);
+		//play animasi
+		Instantiate(player, Checkpoint, Quaternion.identity);
 	}
 
 	private void Deactivate()

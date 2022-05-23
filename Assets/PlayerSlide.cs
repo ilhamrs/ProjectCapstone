@@ -6,7 +6,7 @@ public class PlayerSlide : MonoBehaviour
 {
     public bool isSliding = false;
 
-    public MovePlayer moveplayer;
+    public PlayerMove playerMove;
 
     public Rigidbody2D rb;
 
@@ -41,7 +41,7 @@ public class PlayerSlide : MonoBehaviour
         regularColl.enabled = false;
         slideColl.enabled = true;
 
-        if (!moveplayer.sprite)
+        if (!playerMove.sprite)
         {
             rb.AddForce(Vector2.right * slideSpeed);
         }
