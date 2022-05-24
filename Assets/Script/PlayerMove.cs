@@ -8,18 +8,19 @@ public class PlayerMove : MonoBehaviour
 	[SerializeField] bool IsGrounded;
 	//public bool isMoving;
 
-	//public Animator anim;
 	private Rigidbody2D rb;
+	private Animator anim;
 	public SpriteRenderer sprite;
+	public AudioSource sfxJump;
 
 	public float moveSpeed = 5f;
 	public float JumpForce;
 
-	public AudioSource sfxJump;
+	
 
 	[SerializeField]
 	GameObject player;
-	Animator anim;
+	
 	bool isMoving;
 
 	public Vector2 Checkpoint;
@@ -55,6 +56,7 @@ public class PlayerMove : MonoBehaviour
 			Jump();
 		}
 		anim.SetBool("goWalk", horiz != 0);
+		anim.SetBool("grounded", IsGrounded);
 
 		//var move = new Vector3(Input.GetAxis("Horizontal"), 0);
 		//transform.position += move * moveSpeed * Time.deltaTime;
