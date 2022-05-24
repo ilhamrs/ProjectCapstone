@@ -19,6 +19,8 @@ public class PlayerMove : MonoBehaviour
 
 	[SerializeField]
 	GameObject player;
+	Animator anim;
+	bool isMoving;
 
 	public Vector2 Checkpoint;
 
@@ -26,7 +28,7 @@ public class PlayerMove : MonoBehaviour
     {
 		rb = GetComponent<Rigidbody2D>();
 		Checkpoint = rb.position;
-		//anim = GetComponent<Animator>();
+		anim = GetComponent<Animator>();
 	}
 
     void Update()
@@ -37,21 +39,22 @@ public class PlayerMove : MonoBehaviour
 		if (horiz > 0.0f)
 		{
 			//isMoving = true;
-			sprite.flipX = true;
-			//anim.SetBool("IsMove", true);
+			//sprite.flipX = true;
+			//anim.SetBool("goWalk", true);
 			transform.localScale = new Vector3(1, 1, 1);
 		}
 		else if (horiz < -0.01f)
 		{
 			//isMoving = true;
-			sprite.flipX = false;
-			//anim.SetBool("IsMove", true);
+			//sprite.flipX = false;
+			//anim.SetBool("goWalk", true);
 			transform.localScale = new Vector3(-1, 1, 1);
 		}
 		if (Input.GetKey(KeyCode.Space) && IsGrounded)
 		{
 			Jump();
 		}
+		anim.SetBool("goWalk", horiz != 0);
 
 		//var move = new Vector3(Input.GetAxis("Horizontal"), 0);
 		//transform.position += move * moveSpeed * Time.deltaTime;
