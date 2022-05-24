@@ -1,52 +1,62 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
+	[Header("Components")]
+	public Animator anim;
+	private Rigidbody2D rb;
+	public SpriteRenderer sprite;
+	private Collider2D collider;
 
+	[Header("Physics")]
+	public float moveSpeed = 5f;
+	public float JumpForce = 15;
+	public Vector2 Checkpoint;
+	public bool active = true;
 	[SerializeField] bool IsGrounded;
 	//public bool isMoving;
 
-	//public Animator anim;
-	private Rigidbody2D rb;
-	public SpriteRenderer sprite;
-
-	public float moveSpeed = 5f;
-	public float JumpForce;
-
+	[Header("SFX")]
+	[SerializeField] private AudioClip deathSound;
+	[SerializeField] private AudioClip hurtSound;
 	public AudioSource sfxJump;
 
-	[SerializeField]
-	GameObject player;
-	Animator anim;
-	bool isMoving;
+	[Header("Objects")]
+	[SerializeField] GameObject player;
 
-	public Vector2 Checkpoint;
 
     private void Start()
     {
 		rb = GetComponent<Rigidbody2D>();
-		Checkpoint = rb.position;
+		//Checkpoint = rb.position;
+		SetRespawnPoint(transform.position);
 		anim = GetComponent<Animator>();
+		collider = GetComponent<Collider2D>();
 	}
 
     void Update()
 	{
+		if (!active) 
+		{
+			return;
+		}
 		float horiz = Input.GetAxis("Horizontal");
 		rb.velocity = new Vector2(horiz * moveSpeed, rb.velocity.y);
 
 		if (horiz > 0.0f)
 		{
 			//isMoving = true;
-			//sprite.flipX = true;
+			//sprite.flipX = false;
 			//anim.SetBool("goWalk", true);
 			transform.localScale = new Vector3(1, 1, 1);
 		}
 		else if (horiz < -0.01f)
 		{
 			//isMoving = true;
-			//sprite.flipX = false;
+			//sprite.flipX = true;
 			//anim.SetBool("goWalk", true);
 			transform.localScale = new Vector3(-1, 1, 1);
 		}
@@ -56,27 +66,16 @@ public class PlayerMove : MonoBehaviour
 		}
 		anim.SetBool("goWalk", horiz != 0);
 
-		//var move = new Vector3(Input.GetAxis("Horizontal"), 0);
-		//transform.position += move * moveSpeed * Time.deltaTime;
-
 		//if (Input.GetKey(KeyCode.D))
 		//{
 		//	isMoving = true;
 		//	sprite.flipX = false;
-		//	anim.SetBool("IsMove", true);
 		//}
-		//else if (Input.GetKey(KeyCode.A))
+		//if (Input.GetKey(KeyCode.A))
 		//{
 		//	isMoving = true;
 		//	sprite.flipX = true;
-		//	anim.SetBool("IsMove", true);
 		//}
-		//if (!Input.anyKey)
-		//{
-		//	isMoving = false;
-		//	anim.SetBool("IsMove", false);
-		//}
-
 	}
 
 	private void Jump()
@@ -106,9 +105,35 @@ public class PlayerMove : MonoBehaviour
 		//play animasi
 		Instantiate(player, Checkpoint, Quaternion.identity);
 	}
+	private IEnumerator Respawns() 
+	{
+		yield return new WaitForSeconds(1f);
+		transform.position = Checkpoint;
+		active = true;
+		collider.enabled = true;
+		MiniJump();
+	}
 
 	private void Deactivate()
 	{
 		gameObject.SetActive(false);
+	}
+
+	public void Die() 
+	{
+		active = false;
+		//ini bisa di false buat efek fall gitu
+		collider.enabled = false;
+		MiniJump();
+		StartCoroutine(Respawns());
+	}
+	public void SetRespawnPoint(Vector2 position) 
+	{
+		Checkpoint = position;
+	}
+
+    private void MiniJump()
+    {
+		rb.velocity = Vector2.up * JumpForce/3;
 	}
 }
