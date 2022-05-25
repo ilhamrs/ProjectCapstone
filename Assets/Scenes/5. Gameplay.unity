@@ -3605,18 +3605,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1314912072}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   DestroyTrigger: 0
 --- !u!61 &1314912072
 BoxCollider2D:
@@ -5375,7 +5363,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1872449762
 Transform:
   m_ObjectHideFlags: 0
@@ -5472,7 +5460,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -5500,6 +5488,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2126a923a963cce4f9588f6f199bd0b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  revisi: {fileID: 1925897337}
+  trapObject: {fileID: 1872449761}
   rb: {fileID: 1872449764}
   boxCollider2D: {fileID: 1872449765}
   isFalling: 0
@@ -5635,6 +5625,7 @@ GameObject:
   - component: {fileID: 1925897334}
   - component: {fileID: 1925897336}
   - component: {fileID: 1925897335}
+  - component: {fileID: 1925897337}
   m_Layer: 5
   m_Name: Revisi
   m_TagString: Untagged
@@ -5701,6 +5692,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1925897333}
   m_CullTransparentMesh: 1
+--- !u!114 &1925897337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925897333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14a684ac2bf2851418572991ce0db674, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  revisiText: {fileID: 1222060841}
 --- !u!1 &1941531689
 GameObject:
   m_ObjectHideFlags: 0
