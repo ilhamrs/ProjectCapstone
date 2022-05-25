@@ -37,6 +37,7 @@ public class FallingObjects : MonoBehaviour
         rb.gravityScale = 5;
         isFalling = true;
         trapObject.SetActive(true);
+        StartCoroutine(Reset(1));
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -45,7 +46,6 @@ public class FallingObjects : MonoBehaviour
         {
             //Destroy(gameObject);
             revisi.getHit();
-            StartCoroutine(Reset(1));
         }
         else
         {
