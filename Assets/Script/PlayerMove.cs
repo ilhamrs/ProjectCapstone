@@ -9,7 +9,7 @@ public class PlayerMove : MonoBehaviour
 	public Animator anim;
 	private Rigidbody2D rb;
 	public SpriteRenderer sprite;
-	private Collider2D collider;
+	private Collider2D col;
 
 	[Header("Physics")]
 	public float moveSpeed = 5f;
@@ -34,7 +34,7 @@ public class PlayerMove : MonoBehaviour
 		//Checkpoint = rb.position;
 		SetRespawnPoint(transform.position);
 		anim = GetComponent<Animator>();
-		collider = GetComponent<Collider2D>();
+		col = GetComponent<Collider2D>();
 	}
 
     void Update()
@@ -112,7 +112,7 @@ public class PlayerMove : MonoBehaviour
 		yield return new WaitForSeconds(1f);
 		transform.position = Checkpoint;
 		active = true;
-		collider.enabled = true;
+		col.enabled = true;
 		MiniJump();
 	}
 
