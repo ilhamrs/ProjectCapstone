@@ -60,9 +60,11 @@ public class PlayerMove : MonoBehaviour
 			//anim.SetBool("goWalk", true);
 			transform.localScale = new Vector3(-1, 1, 1);
 		}
-		if (Input.GetKey(KeyCode.Space) && IsGrounded)
+		if (Input.GetKeyDown(KeyCode.Space) && IsGrounded)
 		{
-			Jump();
+			//fungsi jump ada di animasi
+			//Jump();
+			anim.SetTrigger("goJump");
 		}
 		anim.SetBool("goWalk", horiz != 0);
 
@@ -123,7 +125,7 @@ public class PlayerMove : MonoBehaviour
 	{
 		active = false;
 		//ini bisa di false buat efek fall gitu
-		collider.enabled = false;
+		//collider.enabled = false;
 		MiniJump();
 		StartCoroutine(Respawns());
 	}
