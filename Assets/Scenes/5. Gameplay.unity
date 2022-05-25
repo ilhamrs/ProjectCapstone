@@ -3506,7 +3506,7 @@ MonoBehaviour:
   isSliding: 0
   playerMove: {fileID: 1321778844}
   rb: {fileID: 1321778849}
-  anim: {fileID: 0}
+  anim: {fileID: 1321778850}
   regularColl: {fileID: 1321778847}
   slideColl: {fileID: 1664968207}
   slideSpeed: 5000
@@ -4525,7 +4525,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.046468563, y: -0.6492046}
+  m_Offset: {x: 0.0003452301, y: -0.5165667}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4536,7 +4536,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5562534, y: 0.7841525}
+  m_Size: {x: 0.8371315, y: 0.5188767}
   m_EdgeRadius: 0
 --- !u!212 &1664968208
 SpriteRenderer:

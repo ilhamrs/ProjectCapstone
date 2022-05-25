@@ -20,7 +20,7 @@ public class PlayerSlide : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        anim.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -29,6 +29,7 @@ public class PlayerSlide : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftShift)) 
         {
             perfomSlide();
+            anim.SetTrigger("goSlide");
         }
     }
 

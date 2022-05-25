@@ -12,7 +12,6 @@ public class Inspector_LoadSceneClick : MonoBehaviour
 
     [Header("Main Settings")]
     public string TargetScene;
-    public string TargetScene2;
 
     public void LoadScene()
     {
@@ -20,25 +19,9 @@ public class Inspector_LoadSceneClick : MonoBehaviour
         SceneManager.LoadScene(TargetScene);
     }
     
-    public void LoadSelectChapter()
-    {
-        SceneManager.LoadScene(TargetScene2);
-    }
     public void MoveToScene(string sceneName)
     {
         //melakukan perpindahan antar scene berdasarkan nama scene
         SceneManager.LoadScene(sceneName);
-    }
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }
