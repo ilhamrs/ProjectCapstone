@@ -1,3 +1,5 @@
+using System;
+using System.Data;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,11 +7,14 @@ using UnityEngine;
 public class EnemyFollow : MonoBehaviour
 {
     [SerializeField]
-    Transform player;
+    public Transform player;
+    public Transform Skeleton;
+
     [SerializeField]
     float Range;
     [SerializeField]
     float speed;
+
     Rigidbody2D rb;
     void Start()
     {
@@ -19,14 +24,16 @@ public class EnemyFollow : MonoBehaviour
     void Update()
     {
         float distance = Vector2.Distance(transform.position, player.position);
+        float distance1 = Vector2.Distance(transform.position, Skeleton.position);
+
         if(distance < Range)
         {
             FollowPlayer();
         }
-        // else 
-        // {
-        //     triggerTulang();
-        // }
+        else if (distance1 < Range) 
+        {
+            FollowTulang();
+        }
     }
 
     private void FollowPlayer()
@@ -44,16 +51,18 @@ public class EnemyFollow : MonoBehaviour
         }
     }
 
-    private void triggerTulang()
+    private void FollowTulang()
     {
-        rb.velocity = Vector2.zero;
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if(other.tag == "Tulang")
+        if(transform.position.x < Skeleton.position.x)
         {
-            triggerTulang();
+            rb.velocity = new Vector2(speed, 0);
+            transform.localScale = new Vector2(1, 1);
+        }
+        else 
+        {
+            rb.velocity = new Vector2(-speed, 0);
+            transform.localScale = new Vector2(-1, 1);
+
         }
     }
 }

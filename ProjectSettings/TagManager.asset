@@ -7,7 +7,7 @@ TagManager:
   - Ground
   - Enemy
   - EnemyDog
-  - Tulang
+  - Skeleton
   layers:
   - Default
   - TransparentFX
