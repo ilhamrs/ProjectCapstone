@@ -124,6 +124,7 @@ public class PlayerMove : MonoBehaviour
 	public void Die() 
 	{
 		active = false;
+		anim.SetTrigger("goDie");
 		//ini bisa di false buat efek fall gitu
 		//collider.enabled = false;
 		MiniJump();
