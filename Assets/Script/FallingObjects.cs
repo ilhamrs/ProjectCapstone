@@ -6,6 +6,7 @@ public class FallingObjects : MonoBehaviour
 {
     [SerializeField] Revisi revisi;
     public GameObject trapObject;
+    public GameObject triggerTrap;
     public Rigidbody2D rb;
     public BoxCollider2D boxCollider2D;
     public bool isFalling = false;
@@ -37,7 +38,9 @@ public class FallingObjects : MonoBehaviour
         rb.gravityScale = 5;
         isFalling = true;
         trapObject.SetActive(true);
-        StartCoroutine(Reset(1));
+        triggerTrap.SetActive(false);
+        //coroutine aku pindahin ke collision
+        //StartCoroutine(Reset(1));
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -46,6 +49,7 @@ public class FallingObjects : MonoBehaviour
         {
             //Destroy(gameObject);
             revisi.getHit();
+            StartCoroutine(Reset(1));
         }
         else
         {
@@ -60,6 +64,7 @@ public class FallingObjects : MonoBehaviour
         if(collision.tag == "Player")
         {
             revisi.getHit();
+            StartCoroutine(Reset(1));
         }
     }
 
@@ -68,6 +73,7 @@ public class FallingObjects : MonoBehaviour
         yield return new WaitForSeconds(time);
 
         trapObject.SetActive(false);
+        triggerTrap.SetActive(true);
         Debug.Log("reset");
     }
 }
