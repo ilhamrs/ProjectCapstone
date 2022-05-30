@@ -26,4 +26,9 @@ public class Revisi : MonoBehaviour
         Debug.Log("get hit");
         revisiText.text = jmlRevisi.ToString();
     }
+
+    public int getRevisi()
+    {
+        return jmlRevisi;
+    }
 }
