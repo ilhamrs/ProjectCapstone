@@ -29,6 +29,8 @@ public class Finish : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
+            ChapterOneSaveSystem.SaveGame(timer, revisi);
+
             Time.timeScale = 0;
             finishMenu.SetActive(true);
 
