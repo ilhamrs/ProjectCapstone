@@ -40,8 +40,6 @@ public class FallingObjects : MonoBehaviour
         isFalling = true;
         ResetObject reset = gameObject.GetComponent<ResetObject>();
         reset.active();
-        //coroutine aku pindahin ke collision
-        //StartCoroutine(Reset(1));
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

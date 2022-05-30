@@ -94,15 +94,7 @@ public class PlayerMove : MonoBehaviour
 			IsGrounded = false;
 		}
 	}
-
-	public void Respawn()
-	{
-		//ini dah bener, 0.1f biar jeda spawn karakternya ga keliatan
-		Destroy(gameObject, 0.1f);
-		//play animasi
-		Instantiate(player, Checkpoint, Quaternion.identity);
-	}
-	private IEnumerator Respawns() 
+	public IEnumerator Respawns() 
 	{
 		yield return new WaitForSeconds(1f);
 		rb.constraints &= ~RigidbodyConstraints2D.FreezePosition;
@@ -110,7 +102,6 @@ public class PlayerMove : MonoBehaviour
 		active = true;
 		col.enabled = true;
 		rb.gravityScale = 6;
-		rb.mass = 1;
 	}
 
 	private void Deactivate()

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InstantDeath : MonoBehaviour
 {
-    private void OnCollisionEnter2D(Collision2D other)
+    protected void OnCollisionEnter2D(Collision2D other)
     {
         var player = other.collider.GetComponent<PlayerMove>();
         if (player != null) 
@@ -13,7 +13,7 @@ public class InstantDeath : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player") 
         {
