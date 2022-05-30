@@ -356,7 +356,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &118311750
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6907,6 +6907,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   finishMenu: {fileID: 118311749}
+  timer: {fileID: 688386956}
+  revisi: {fileID: 1925897337}
+  timerText: {fileID: 1737862011}
+  revisiText: {fileID: 777828291}
 --- !u!212 &2033960989
 SpriteRenderer:
   m_ObjectHideFlags: 0
