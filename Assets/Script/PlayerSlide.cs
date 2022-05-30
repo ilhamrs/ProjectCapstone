@@ -26,10 +26,9 @@ public class PlayerSlide : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift)) 
+        if (Input.GetKeyDown(KeyCode.LeftShift) && playerMove.isMoving == true) 
         {
-            perfomSlide();
-            anim.SetTrigger("goSlide");
+            perfomSlide();   
         }
     }
 
@@ -37,12 +36,12 @@ public class PlayerSlide : MonoBehaviour
     {
         isSliding = true;
 
-        //ini animasi slide
+        anim.SetBool("goSlide", true);
 
         regularColl.enabled = false;
         slideColl.enabled = true;
 
-        if (!playerMove.sprite)
+        if (!playerMove.sprite.flipX)
         {
             rb.AddForce(Vector2.right * slideSpeed);
         }
@@ -57,7 +56,7 @@ public class PlayerSlide : MonoBehaviour
     IEnumerator stopslide() 
     {
         yield return new WaitForSeconds(0.8f);
-        //ini animasi
+        anim.SetBool("goSlide", false);
         regularColl.enabled = true;
         slideColl.enabled = false;
         isSliding = false;

@@ -5,34 +5,18 @@ using UnityEngine.Events;
 
 public class ResetObject : MonoBehaviour
 {
-    
-    public GameObject objects;
+    public GameObject trapObject;
+    public GameObject triggerTrap;
 
-    [Header("Conditional Event")]
-    public UnityEvent ConditionalEvents;
-
-    // Start is called before the first frame update
-    void Start()
+    public void active() 
     {
-        StartCoroutine(Restart());
+        trapObject.SetActive(true);
+        triggerTrap.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void nonactive() 
     {
-        
-    }
-    public void Respawn()
-    {
-        Debug.Log("environment berhasil respawn");
-        //ini dah bener, 0.1f biar jeda spawn objects ga keliatan
-        Destroy(this.objects, 0f);
-        //play animasi code disini
-        Instantiate(objects, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
-    }
-    public IEnumerator Restart() 
-    {
-        yield return new WaitForSeconds(0f);
-        ConditionalEvents.Invoke();
+        trapObject.SetActive(false);
+        triggerTrap.SetActive(true);
     }
 }

@@ -37,8 +37,8 @@ public class FallingObjects : MonoBehaviour
     {
         rb.gravityScale = 5;
         isFalling = true;
-        trapObject.SetActive(true);
-        triggerTrap.SetActive(false);
+        ResetObject reset = gameObject.GetComponent<ResetObject>();
+        reset.active();
         //coroutine aku pindahin ke collision
         //StartCoroutine(Reset(1));
     }
@@ -55,7 +55,6 @@ public class FallingObjects : MonoBehaviour
         {
             rb.gravityScale = 0;
             boxCollider2D.enabled = false;
-            //disini bisa dikasih delay biar dia ilang gitu
         }
     }
 
@@ -72,8 +71,8 @@ public class FallingObjects : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
 
-        trapObject.SetActive(false);
-        triggerTrap.SetActive(true);
+        ResetObject reset = gameObject.GetComponent<ResetObject>();
+        reset.nonactive();
         Debug.Log("reset");
     }
 }

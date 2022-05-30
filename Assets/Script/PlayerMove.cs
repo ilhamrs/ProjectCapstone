@@ -17,7 +17,7 @@ public class PlayerMove : MonoBehaviour
 	public Vector2 Checkpoint;
 	public bool active = true;
 	[SerializeField] bool IsGrounded;
-	//public bool isMoving;
+	public bool isMoving;
 
 	[Header("SFX")]
 	[SerializeField] private AudioClip deathSound;
@@ -28,7 +28,8 @@ public class PlayerMove : MonoBehaviour
 	[SerializeField] GameObject player;
 
 
-    private void Start()
+
+	private void Start()
     {
 		rb = GetComponent<Rigidbody2D>();
 		//Checkpoint = rb.position;
@@ -37,7 +38,7 @@ public class PlayerMove : MonoBehaviour
 		col = GetComponent<Collider2D>();
 	}
 
-    void Update()
+    public void Update()
 	{
 		if (!active) 
 		{
@@ -48,14 +49,14 @@ public class PlayerMove : MonoBehaviour
 
 		if (horiz > 0.0f)
 		{
-			//isMoving = true;
+			isMoving = true;
 			//sprite.flipX = false;
 			//anim.SetBool("goWalk", true);
 			transform.localScale = new Vector3(1, 1, 1);
 		}
 		else if (horiz < -0.01f)
 		{
-			//isMoving = true;
+			isMoving = true;
 			//sprite.flipX = true;
 			//anim.SetBool("goWalk", true);
 			transform.localScale = new Vector3(-1, 1, 1);
@@ -66,18 +67,12 @@ public class PlayerMove : MonoBehaviour
 			//Jump();
 			anim.SetTrigger("goJump");
 		}
+		if (!Input.anyKey)
+		{
+			isMoving = false;
+		}
 		anim.SetBool("goWalk", horiz != 0);
 
-		//if (Input.GetKey(KeyCode.D))
-		//{
-		//	isMoving = true;
-		//	sprite.flipX = false;
-		//}
-		//if (Input.GetKey(KeyCode.A))
-		//{
-		//	isMoving = true;
-		//	sprite.flipX = true;
-		//}
 	}
 
 	private void Jump()
