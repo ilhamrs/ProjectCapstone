@@ -105,10 +105,12 @@ public class PlayerMove : MonoBehaviour
 	private IEnumerator Respawns() 
 	{
 		yield return new WaitForSeconds(1f);
+		rb.constraints &= ~RigidbodyConstraints2D.FreezePosition;
 		transform.position = Checkpoint;
 		active = true;
 		col.enabled = true;
 		rb.gravityScale = 6;
+		rb.mass = 1;
 	}
 
 	private void Deactivate()
@@ -120,10 +122,9 @@ public class PlayerMove : MonoBehaviour
 	{
 		active = false;
 		anim.SetTrigger("goDie");
-		//ini bisa di false buat efek fall gitu
 		col.enabled = false;
 		rb.gravityScale = 0;
-		//MiniJump();
+		rb.constraints = RigidbodyConstraints2D.FreezeAll;
 		StartCoroutine(Respawns());
 	}
 	public void SetRespawnPoint(Vector2 position) 

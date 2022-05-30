@@ -37,6 +37,9 @@ public class ExplodeEffect : MonoBehaviour
     {
         rb.gravityScale = fallspeed;
         isFalling = true;
+        boxCollider2D.enabled = true;
+        ResetObject reset = gameObject.GetComponent<ResetObject>();
+        reset.active();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
