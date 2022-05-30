@@ -1,10 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PauseMenuEsc : MonoBehaviour
 {
     public GameObject optionsMenu;
+
+    [Header("Main Settings")]
+    public UnityEvent StartEvent;
+    public bool DestroyTrigger;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,10 +22,15 @@ public class PauseMenuEsc : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            StartEvent.Invoke();
             // Check whether it's active / inactive 
             bool isActive = optionsMenu.activeSelf;
 
             optionsMenu.SetActive(!isActive);
         }
+    }
+    public void InvokeTrigger()
+    {
+        StartEvent.Invoke();
     }
 }

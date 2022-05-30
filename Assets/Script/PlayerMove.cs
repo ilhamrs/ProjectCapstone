@@ -108,7 +108,7 @@ public class PlayerMove : MonoBehaviour
 		transform.position = Checkpoint;
 		active = true;
 		col.enabled = true;
-		MiniJump();
+		rb.gravityScale = 6;
 	}
 
 	private void Deactivate()
@@ -121,8 +121,9 @@ public class PlayerMove : MonoBehaviour
 		active = false;
 		anim.SetTrigger("goDie");
 		//ini bisa di false buat efek fall gitu
-		//collider.enabled = false;
-		MiniJump();
+		col.enabled = false;
+		rb.gravityScale = 0;
+		//MiniJump();
 		StartCoroutine(Respawns());
 	}
 	public void SetRespawnPoint(Vector2 position) 
@@ -130,8 +131,4 @@ public class PlayerMove : MonoBehaviour
 		Checkpoint = position;
 	}
 
-    private void MiniJump()
-    {
-		rb.velocity = Vector2.up * JumpForce/3;
-	}
 }

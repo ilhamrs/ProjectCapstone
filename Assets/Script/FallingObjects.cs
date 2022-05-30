@@ -10,6 +10,7 @@ public class FallingObjects : MonoBehaviour
     public Rigidbody2D rb;
     public BoxCollider2D boxCollider2D;
     public bool isFalling = false;
+    public float fallspeed = 5;
 
     Vector2 originalPos;
 
@@ -35,7 +36,7 @@ public class FallingObjects : MonoBehaviour
     }
     public void Fall() 
     {
-        rb.gravityScale = 5;
+        rb.gravityScale = fallspeed;
         isFalling = true;
         ResetObject reset = gameObject.GetComponent<ResetObject>();
         reset.active();
