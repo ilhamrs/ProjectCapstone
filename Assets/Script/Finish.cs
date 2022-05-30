@@ -9,6 +9,7 @@ public class Finish : MonoBehaviour
     void Start()
     {
         finishMenu.SetActive(false);
+        Time.timeScale = 1;
     }
 
     // Update is called once per frame
@@ -21,6 +22,7 @@ public class Finish : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
+            Time.timeScale = 0;
             finishMenu.SetActive(true);
         }
     }
