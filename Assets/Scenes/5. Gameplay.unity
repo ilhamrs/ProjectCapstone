@@ -3036,7 +3036,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 959629352}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d891ec62d17ec5408b0c372f8f1fee6, type: 3}
   m_Name: 
@@ -7276,7 +7276,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   revisi: {fileID: 1925897337}
   trapObject: {fileID: 2132004852}
-  triggerTrap: {fileID: 0}
+  triggerTrap: {fileID: 697510333}
   rb: {fileID: 2132004855}
   boxCollider2D: {fileID: 2132004854}
   isFalling: 0
