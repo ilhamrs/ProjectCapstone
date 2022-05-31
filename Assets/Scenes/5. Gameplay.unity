@@ -1520,7 +1520,7 @@ GameObject:
   - component: {fileID: 504902032}
   - component: {fileID: 504902031}
   - component: {fileID: 504902030}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ground
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -1963,6 +1963,7 @@ GameObject:
   - component: {fileID: 598321390}
   - component: {fileID: 598321389}
   - component: {fileID: 598321391}
+  - component: {fileID: 598321392}
   m_Layer: 0
   m_Name: Bu Kos_idle_1
   m_TagString: Untagged
@@ -2076,7 +2077,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 6
 --- !u!114 &598321390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2084,7 +2085,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 598321385}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ad66b64e965272b4797e46999bb8ba14, type: 3}
   m_Name: 
@@ -2130,6 +2131,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.4774551, y: 2.4080095}
   m_EdgeRadius: 0
+--- !u!114 &598321392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598321385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 429cb5a34632bbc4b891c34cf86862bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  stopDistance: 1
+  retreatDistance: 0
+  startTimeShots: 0
+  projectile: {fileID: 2680413810299236451, guid: 4478e33e240349946a36324356e8ec44, type: 3}
 --- !u!1 &605495812
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3838943306093110649}
   - component: {fileID: 6374851586461440570}
   - component: {fileID: 1354704512645705566}
-  - component: {fileID: 8327844467363492712}
+  - component: {fileID: -7413305976457693606}
   m_Layer: 0
   m_Name: Sendal_Bu Kos_1
   m_TagString: Untagged
@@ -103,7 +103,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8327844467363492712
+--- !u!114 &-7413305976457693606
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -112,8 +112,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2680413810299236451}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf60deda5c71f244791966367e4e6e62, type: 3}
+  m_Script: {fileID: 11500000, guid: 9d1902d15f831784faf07ed2082baf60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dieTime: 2
-  damage: 1
+  speed: 1000

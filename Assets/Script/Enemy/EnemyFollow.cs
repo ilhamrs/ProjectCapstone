@@ -87,7 +87,7 @@ public class EnemyFollow : MonoBehaviour
         yield return new WaitForSeconds(time);
 
         ResetObject reset = gameObject.GetComponent<ResetObject>();
-        reset.nonactive();
+        //reset.nonactive();
         Debug.Log("reset");
     }
 }

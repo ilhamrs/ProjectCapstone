@@ -33,8 +33,7 @@ public class IbuKos : MonoBehaviour
         distToPlayer = Vector2.Distance(transform.position, player.position);
         if(distToPlayer <= range)
         {
-            if(player.position.x > transform.position.x && transform.localScale.x < 0 
-                || player.position.x < transform.position.x && transform.localScale.x > 0)
+            if(player.position.x > transform.position.x && transform.localScale.x < 0 || player.position.x < transform.position.x && transform.localScale.x > 0)
             {
                 Flip();
             }
