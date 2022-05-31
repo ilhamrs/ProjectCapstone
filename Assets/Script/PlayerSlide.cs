@@ -11,6 +11,7 @@ public class PlayerSlide : MonoBehaviour
     public Rigidbody2D rb;
 
     public Animator anim;
+    public AudioSource sfxSlide;
 
     public BoxCollider2D regularColl;
     public BoxCollider2D slideColl;
@@ -37,6 +38,7 @@ public class PlayerSlide : MonoBehaviour
         isSliding = true;
 
         anim.SetBool("goSlide", true);
+        sfxSlide.Play();
 
         regularColl.enabled = false;
         slideColl.enabled = true;

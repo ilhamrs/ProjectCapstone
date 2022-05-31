@@ -10,6 +10,8 @@ public class EnemyFollow : MonoBehaviour
     public Transform player;
     public Transform Skeleton;
 
+    public AudioSource sfxDog;
+
     [SerializeField]
     float Range;
     [SerializeField]
@@ -42,12 +44,12 @@ public class EnemyFollow : MonoBehaviour
         {
             rb.velocity = new Vector2(speed, 0);
             transform.localScale = new Vector2(1, 1);
+            sfxDog.Play();
         }
         else 
         {
             rb.velocity = new Vector2(-speed, 0);
             transform.localScale = new Vector2(-1, 1);
-
         }
     }
 
