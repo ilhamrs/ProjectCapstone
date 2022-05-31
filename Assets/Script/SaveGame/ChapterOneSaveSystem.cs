@@ -18,6 +18,19 @@ public static class ChapterOneSaveSystem
         stream.Close();
     }
 
+    //jika tidak ada savegame
+    public static void SaveGame()
+    {
+        BinaryFormatter formatter = new BinaryFormatter();
+        string path = Application.persistentDataPath + "/chapOne.sav";
+        FileStream stream = new FileStream(path, FileMode.Create);
+
+        ChapterData data = new ChapterData();
+
+        formatter.Serialize(stream, data);
+        stream.Close();
+    }
+
     public static ChapterData LoadGame()
     {
         string path = Application.persistentDataPath + "/chapOne.sav";
@@ -33,8 +46,15 @@ public static class ChapterOneSaveSystem
         }
         else
         {
-            
-            return null;
+            SaveGame();
+
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream stream = new FileStream(path, FileMode.Open);
+
+            ChapterData data = formatter.Deserialize(stream) as ChapterData;
+            stream.Close();
+
+            return data;
         }
     }
 }

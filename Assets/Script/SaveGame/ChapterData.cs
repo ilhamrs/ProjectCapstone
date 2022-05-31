@@ -13,4 +13,11 @@ public class ChapterData
         time = timer.getTimer();
         jmlRevisi = revisi.getRevisi();
     }
+
+    //jika tidak ada savegame
+    public ChapterData()
+    {
+        time = 0;
+        jmlRevisi = 0;
+    }
 }
