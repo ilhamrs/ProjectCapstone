@@ -11,6 +11,7 @@ public class EnemyFollow : MonoBehaviour
     public Transform Skeleton;
 
     public AudioSource sfxDog;
+    public Animator anim;
 
     [SerializeField]
     float Range;
@@ -21,6 +22,7 @@ public class EnemyFollow : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -30,11 +32,13 @@ public class EnemyFollow : MonoBehaviour
 
         if(distance < Range)
         {
+            anim.SetTrigger("Run");
             FollowPlayer();
         }
         else if (distance1 < Range) 
         {
             FollowTulang();
+            anim.SetTrigger("Take");
         }
     }
 
