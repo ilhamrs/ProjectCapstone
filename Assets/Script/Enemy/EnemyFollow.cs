@@ -9,6 +9,7 @@ public class EnemyFollow : MonoBehaviour
     [SerializeField]
     public Transform player;
     public Transform Skeleton;
+    [SerializeField] Revisi revisi;
 
     public AudioSource sfxDog;
     public Animator anim;
@@ -70,5 +71,23 @@ public class EnemyFollow : MonoBehaviour
             transform.localScale = new Vector2(-1, 1);
 
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Player")
+        {
+            revisi.getHit();
+            StartCoroutine(Reset(1));
+        }
+    }
+
+    IEnumerator Reset(float time)
+    {
+        yield return new WaitForSeconds(time);
+
+        ResetObject reset = gameObject.GetComponent<ResetObject>();
+        reset.nonactive();
+        Debug.Log("reset");
     }
 }
