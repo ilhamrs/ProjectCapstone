@@ -6556,6 +6556,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af3876ce503b68246beef0d440a5cc44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AGrade: {fileID: 21300000, guid: eaa860005a7620744b00500854279bfd, type: 3}
+  BGrade: {fileID: 21300000, guid: 72a4d908379d21141b20b1e1219e9cc2, type: 3}
+  CGrade: {fileID: 21300000, guid: edc2f454d7d7c8141bd6d0145fa65217, type: 3}
+  EGrade: {fileID: 21300000, guid: 856b9fd685d557c4ab9ee1a34b31c10d, type: 3}
   chapOneTime: {fileID: 1162953578}
   chapOneRevision: {fileID: 1947171961}
   chapOneGrade: {fileID: 2119691434}
