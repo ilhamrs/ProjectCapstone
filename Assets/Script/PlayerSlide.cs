@@ -29,8 +29,9 @@ public class PlayerSlide : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftShift) && playerMove.isMoving == true) 
         {
-            perfomSlide();   
+            perfomSlide();
         }
+        //DoDelayAction();
     }
 
     private void perfomSlide() 
@@ -53,6 +54,7 @@ public class PlayerSlide : MonoBehaviour
         }
 
         StartCoroutine("stopslide");
+
     }
 
     IEnumerator stopslide() 
@@ -62,5 +64,16 @@ public class PlayerSlide : MonoBehaviour
         regularColl.enabled = true;
         slideColl.enabled = false;
         isSliding = false;
+    }
+    void DoDelayAction()
+    {
+        StartCoroutine(DelayAction());
+    }
+
+    IEnumerator DelayAction()
+    {
+        //Wait for the specified delay time before continuing.
+        yield return new WaitForSeconds(3);
+
     }
 }
