@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - EnemyDog
   - Skeleton
+  - Teleporter
   layers:
   - Default
   - TransparentFX
