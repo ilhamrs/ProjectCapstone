@@ -43,7 +43,7 @@ public class EnemyFollow : MonoBehaviour
         }
     }
 
-    private void FollowPlayer()
+    public void FollowPlayer()
     {
         if(transform.position.x < player.position.x)
         {
@@ -58,7 +58,7 @@ public class EnemyFollow : MonoBehaviour
         }
     }
 
-    private void FollowTulang()
+    public void FollowTulang()
     {
         if(transform.position.x < Skeleton.position.x)
         {
