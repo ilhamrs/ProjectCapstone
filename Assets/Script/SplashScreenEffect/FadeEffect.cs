@@ -16,7 +16,7 @@ public class FadeEffect : MonoBehaviour
     }
     IEnumerator Delay() 
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(3);
         gameObject.SetActive(false);
     }
 }
