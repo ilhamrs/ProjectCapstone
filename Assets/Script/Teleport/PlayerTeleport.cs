@@ -19,7 +19,7 @@ public class PlayerTeleport : MonoBehaviour
         {
             if (currentTeleporter != null)
             {
-                transform.position = currentTeleporter.GetComponent<Teleporter>().GetDestination().position;
+                //transform.position = currentTeleporter.GetComponent<Teleporter>().GetDestination().position;
                 TriggerEvent.Invoke();
             }
         }

@@ -39,7 +39,7 @@ public class BukosLempar : MonoBehaviour
             if (cooldownTimer >= attackCooldown) 
             {
                 cooldownTimer = 0;
-                anim.SetTrigger("attack");
+                anim.SetTrigger("lempar");
                 RangedAttack();
             }
         }
