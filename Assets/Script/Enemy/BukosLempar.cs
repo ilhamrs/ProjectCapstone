@@ -36,7 +36,7 @@ public class BukosLempar : MonoBehaviour
         if (PlayerInSight()) 
         {
             Debug.Log("insight");
-            if (cooldownTimer >= attackCooldown) 
+            if (cooldownTimer > attackCooldown) 
             {
                 cooldownTimer = 0;
                 anim.SetTrigger("lempar");
@@ -44,6 +44,7 @@ public class BukosLempar : MonoBehaviour
             }
         }
 
+        cooldownTimer += Time.deltaTime;
         //if (enemyPatrol != null) 
         //{
         //    enemyPatrol.enabled = !PlayerInSight();
@@ -53,7 +54,7 @@ public class BukosLempar : MonoBehaviour
     {
         cooldownTimer = 0;
         sendals[FindSendal()].transform.position = firepoint.position;
-        sendals[FindSendal()].GetComponent<EnemyProjectile>().ActivateProjectile();
+        sendals[FindSendal()].GetComponent<EnemyProjectile>().ActivateProjectile(Mathf.Sign(transform.localScale.x));
     }
 
     private int FindSendal()
