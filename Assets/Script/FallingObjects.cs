@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class FallingObjects : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class FallingObjects : MonoBehaviour
     public float fallspeed = 5;
 
     Vector2 originalPos;
+
+    //[Header("Reset Settings")]
+    //public UnityEvent TriggerEvent;
 
     private void Start()
     {
@@ -38,10 +42,12 @@ public class FallingObjects : MonoBehaviour
     {
         rb.gravityScale = fallspeed;
         isFalling = true;
+        //nyalain object matiin trigger
         ResetObject reset = gameObject.GetComponent<ResetObject>();
         reset.active();
     }
 
+    //ini ga terlalu kepake
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -59,19 +65,36 @@ public class FallingObjects : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Player")
+        if (collision.tag == "Player")
         {
             revisi.getHit();
             StartCoroutine(Reset(1));
+            //mungkin disini pengen ditambahin trigger event buat setactive checkpoint trap
+        }
+        if (collision.tag == "Ground") 
+        {
+            trapObject.SetActive(false);
         }
     }
 
-    IEnumerator Reset(float time)
+    //mekanisme reset trap
+   IEnumerator Reset(float time)
     {
         yield return new WaitForSeconds(time);
 
+        //nyalain trigger matiin object
         ResetObject reset = gameObject.GetComponent<ResetObject>();
         reset.nonactive();
         Debug.Log("reset");
     }
+
+    //ini buat restart yang ditaro di checkpoint
+    public void restart() 
+    {
+        StartCoroutine(Reset(1));
+    }
+    //public void InvokeTrigger()
+    //{
+    //    TriggerEvent.Invoke();
+    //}
 }

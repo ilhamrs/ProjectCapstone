@@ -35,9 +35,9 @@ public class ExplodeEffect : MonoBehaviour
     }
     public void Fall()
     {
+        boxCollider2D.enabled = true;
         rb.gravityScale = fallspeed;
         isFalling = true;
-        boxCollider2D.enabled = true;
         ResetObject reset = gameObject.GetComponent<ResetObject>();
         reset.active();
     }
@@ -58,5 +58,9 @@ public class ExplodeEffect : MonoBehaviour
         ResetObject reset = gameObject.GetComponent<ResetObject>();
         reset.nonactive();
         Debug.Log("reset");
+    }
+    public void restart()
+    {
+        StartCoroutine(Reset(1));
     }
 }
