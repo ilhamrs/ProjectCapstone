@@ -48,6 +48,7 @@ public class ExplodeEffect : MonoBehaviour
         {
             rb.gravityScale = 0;
             boxCollider2D.enabled = false;
+            StartCoroutine(delayExplode());
         }
     }
 
@@ -62,5 +63,10 @@ public class ExplodeEffect : MonoBehaviour
     public void restart()
     {
         StartCoroutine(Reset(1));
+    }
+    IEnumerator delayExplode() 
+    {
+        yield return new WaitForSeconds(2f);
+        trapObject.SetActive(false);
     }
 }

@@ -36,7 +36,7 @@ public class ProjectileExplode : MonoBehaviour
     }
     private IEnumerator DelayTai() 
     {
-        yield return new WaitForSeconds(0f);
+        yield return new WaitForSeconds(2f);
         //sprite.enabled = false;
     }
 }
