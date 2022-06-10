@@ -7,6 +7,8 @@ public class EnemyProjectile : InstantDeath
     [SerializeField] private float speed;
     [SerializeField] private float resetTime;
     [SerializeField] Revisi revisi;
+    public GameObject trapObject;
+    public GameObject triggerTrap;
     private float lifetime;
     private float direction;
     private Animator anim;
@@ -33,6 +35,9 @@ public class EnemyProjectile : InstantDeath
 
     public void ActivateProjectile(float projectile_direction)
     {
+        ResetObject reset = gameObject.GetComponent<ResetObject>();
+        reset.active();
+
         hit = false;
         direction = projectile_direction;
         lifetime = 0;
@@ -69,7 +74,7 @@ public class EnemyProjectile : InstantDeath
         yield return new WaitForSeconds(time);
 
         ResetObject reset = gameObject.GetComponent<ResetObject>();
-        //reset.nonactive();
+        reset.nonactive();
         Debug.Log("reset");
     }
     
