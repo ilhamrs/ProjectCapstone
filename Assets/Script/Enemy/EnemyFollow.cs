@@ -39,6 +39,7 @@ public class EnemyFollow : MonoBehaviour
         else if (distance1 < Range) 
         {
             FollowTulang();
+            //distance - 5;
             anim.SetTrigger("Take");
         }
     }
