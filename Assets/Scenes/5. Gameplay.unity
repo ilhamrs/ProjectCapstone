@@ -6921,6 +6921,7 @@ GameObject:
   - component: {fileID: 804570480}
   - component: {fileID: 804570479}
   - component: {fileID: 804570478}
+  - component: {fileID: 804570484}
   m_Layer: 0
   m_Name: LampuBalik
   m_TagString: Untagged
@@ -7064,6 +7065,20 @@ Transform:
   m_Father: {fileID: 1467803211}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &804570484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 804570477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 116748a3d432f854795c126330e4da5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  revisi: {fileID: 1925897337}
+  boxCollider2D: {fileID: 804570480}
 --- !u!1 &808229625
 GameObject:
   m_ObjectHideFlags: 0
@@ -7493,8 +7508,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -70.657, y: 0.000011444092}
-  m_SizeDelta: {x: 137.11, y: 50}
+  m_AnchoredPosition: {x: -59.101, y: 0.000011444092}
+  m_SizeDelta: {x: 160.22, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &832136149
 MonoBehaviour:
@@ -7509,7 +7524,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7529,7 +7544,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Revisi: '
+  m_Text: 'Revision: '
 --- !u!222 &832136150
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8271,7 +8286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9641,6 +9656,7 @@ GameObject:
   - component: {fileID: 1081236987}
   - component: {fileID: 1081236986}
   - component: {fileID: 1081236989}
+  - component: {fileID: 1081236990}
   m_Layer: 0
   m_Name: Genangan Air 2
   m_TagString: Untagged
@@ -9723,7 +9739,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1248394525}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1081236989
 BoxCollider2D:
@@ -9751,6 +9767,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.05412674, y: 0.24251634}
   m_EdgeRadius: 0
+--- !u!114 &1081236990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1081236985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87a4fac084e195a478642d19df50fef2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  revisi: {fileID: 1925897337}
+  boxCollider2D: {fileID: 1081236989}
 --- !u!1 &1096484926
 GameObject:
   m_ObjectHideFlags: 0
@@ -10651,7 +10681,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1166982662}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 59.56, y: -20.14, z: 0}
+  m_LocalPosition: {x: 59.4, y: -20.14, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1321778852}
@@ -10984,8 +11014,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 69.606, y: 0.000011444092}
-  m_SizeDelta: {x: 139.21, y: 50}
+  m_AnchoredPosition: {x: 80.111, y: 0.000011444092}
+  m_SizeDelta: {x: 118.201, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1222060841
 MonoBehaviour:
@@ -11000,7 +11030,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -11194,8 +11224,8 @@ Transform:
   - {fileID: 1707457706}
   - {fileID: 1153197503}
   - {fileID: 1467803211}
-  - {fileID: 1081236988}
   - {fileID: 1607656915}
+  - {fileID: 1081236988}
   - {fileID: 1912184406}
   - {fileID: 1751891059}
   - {fileID: 2006572270}
@@ -13672,6 +13702,7 @@ GameObject:
   - component: {fileID: 1607656914}
   - component: {fileID: 1607656913}
   - component: {fileID: 1607656912}
+  - component: {fileID: 1607656916}
   m_Layer: 0
   m_Name: Ember
   m_TagString: Untagged
@@ -13780,8 +13811,22 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1248394525}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1607656916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1607656911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87a4fac084e195a478642d19df50fef2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  revisi: {fileID: 1925897337}
+  boxCollider2D: {fileID: 1607656912}
 --- !u!1 &1648831838
 GameObject:
   m_ObjectHideFlags: 0
@@ -14982,6 +15027,7 @@ GameObject:
   - component: {fileID: 1751891058}
   - component: {fileID: 1751891057}
   - component: {fileID: 1751891060}
+  - component: {fileID: 1751891061}
   m_Layer: 0
   m_Name: Genangan Air 1
   m_TagString: Untagged
@@ -15092,6 +15138,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.10047531, y: 0.1332779}
   m_EdgeRadius: 0
+--- !u!114 &1751891061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751891056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87a4fac084e195a478642d19df50fef2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  revisi: {fileID: 1925897337}
+  boxCollider2D: {fileID: 1751891060}
 --- !u!1 &1768384044
 GameObject:
   m_ObjectHideFlags: 0
@@ -18344,11 +18404,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   revisi: {fileID: 1925897337}
-  trapObject: {fileID: 2133570913}
-  triggerTrap: {fileID: 1101338470}
-  boxCollider2D: {fileID: 2133570915}
-  isRising: 0
-  speed: 3
+  boxCollider2D: {fileID: 0}
 --- !u!61 &2133570915
 BoxCollider2D:
   m_ObjectHideFlags: 0
