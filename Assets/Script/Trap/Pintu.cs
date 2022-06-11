@@ -17,6 +17,7 @@ public class Pintu : MonoBehaviour
     {
         boxCollider2D = GetComponent<BoxCollider2D>();
         anim = GetComponent<Animator>();
+
         //ini buat bug yang awalnya animasi tidak jalan
         anim.SetTrigger("isOpen");
     }

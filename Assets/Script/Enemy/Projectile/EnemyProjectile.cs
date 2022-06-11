@@ -56,16 +56,19 @@ public class EnemyProjectile : InstantDeath
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        hit = true;
-        base.OnTriggerEnter2D(collision); //Execute logic from parent script first
-        coll.enabled = false;
-        revisi.getHit();
-        StartCoroutine(Reset(1));
-
-        if (anim != null)
-            gameObject.SetActive(false); //when hit enemy will disapeare
-        else
-            gameObject.SetActive(false); //When this hits any object deactivate arrow
+        if (collision.tag == "Player")
+        {
+            hit = true;
+            //base.OnTriggerEnter2D(collision); //Execute logic from parent script first
+            coll.enabled = false;
+            revisi.getHit();
+            StartCoroutine(Reset(1));
+            gameObject.SetActive(false);
+        }
+        //if (anim != null)
+        //    gameObject.SetActive(false); //when hit enemy will disapeare
+        //else
+        //    gameObject.SetActive(false); //When this hits any object deactivate arrow
         
     }
 
