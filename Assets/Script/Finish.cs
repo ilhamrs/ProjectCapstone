@@ -37,8 +37,8 @@ public class Finish : MonoBehaviour
             float minutes = Mathf.FloorToInt(timer.getTimer() / 60);
             float seconds = Mathf.FloorToInt(timer.getTimer() % 60);
 
-            timerText.text = "Time: " + string.Format("{0:00}:{1:00}", minutes, seconds);
-            revisiText.text = "Revision: " + revisi.getRevisi().ToString();
+            timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+            revisiText.text = revisi.getRevisi().ToString();
         }
     }
 }
