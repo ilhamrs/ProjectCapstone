@@ -56,13 +56,13 @@ public class ChapterSelectionManager : MonoBehaviour
         else
         {
             chapOneGrade.SetActive(true);
-            if(dataChapOne.time < 30 && dataChapOne.jmlRevisi < 5)
+            if(dataChapOne.jmlRevisi < 10)
             {
                 chapOneGrade.GetComponent<Image>().sprite = AGrade;
-            } else if(dataChapOne.time < 45 && dataChapOne.jmlRevisi < 7)
+            } else if(dataChapOne.jmlRevisi < 20)
             {
                 chapOneGrade.GetComponent<Image>().sprite = BGrade;
-            } else if (dataChapOne.time < 60 && dataChapOne.jmlRevisi < 10)
+            } else if (dataChapOne.jmlRevisi < 30)
             {
                 chapOneGrade.GetComponent<Image>().sprite = CGrade;
             }

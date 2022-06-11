@@ -8,14 +8,34 @@ public static class ChapterOneSaveSystem
 {
     public static void SaveGame(Timer timer, Revisi revisi)
     {
-        BinaryFormatter formatter = new BinaryFormatter();
         string path = Application.persistentDataPath + "/chapOne.sav";
-        FileStream stream = new FileStream(path, FileMode.Create);
 
-        ChapterData data = new ChapterData(timer, revisi);
+        if (!File.Exists(path))
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream stream = new FileStream(path, FileMode.Create);
 
-        formatter.Serialize(stream, data);
-        stream.Close();
+            ChapterData data = new ChapterData(timer, revisi);
+
+            formatter.Serialize(stream, data);
+            stream.Close();
+        }
+        else
+        {
+            ChapterData data = LoadGame();
+
+            if(timer.getTimer() < data.time && revisi.getRevisi() < data.jmlRevisi)
+            {
+                BinaryFormatter formatter = new BinaryFormatter();
+                FileStream stream = new FileStream(path, FileMode.Create);
+
+                ChapterData data2 = new ChapterData(timer, revisi);
+
+                formatter.Serialize(stream, data2);
+                stream.Close();
+            }
+        }
+        
     }
 
     //jika tidak ada savegame
@@ -46,15 +66,16 @@ public static class ChapterOneSaveSystem
         }
         else
         {
-            SaveGame();
+            //SaveGame();
 
-            BinaryFormatter formatter = new BinaryFormatter();
-            FileStream stream = new FileStream(path, FileMode.Open);
+            //BinaryFormatter formatter = new BinaryFormatter();
+            //FileStream stream = new FileStream(path, FileMode.Open);
 
-            ChapterData data = formatter.Deserialize(stream) as ChapterData;
-            stream.Close();
+            //ChapterData data = formatter.Deserialize(stream) as ChapterData;
+            //stream.Close();
 
-            return data;
+            //return data;
+            return null;
         }
     }
 }
