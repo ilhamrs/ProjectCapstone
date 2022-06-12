@@ -20,7 +20,7 @@ public class PlayerMove : MonoBehaviour
 	public bool isMoving;
 
 	[Header("SFX")]
-	public AudioSource deathSound;
+	[SerializeField] private AudioSource deathSound;
 	[SerializeField] private AudioClip hurtSound;
 	public AudioSource sfxJump;
 
@@ -117,7 +117,6 @@ public class PlayerMove : MonoBehaviour
 		rb.gravityScale = 0;
 		rb.constraints = RigidbodyConstraints2D.FreezeAll;
 		deathSound.Play();
-		//deathSound.SetActive(true);
 		StartCoroutine(Respawns());
 	}
 	public void SetRespawnPoint(Vector2 position) 
