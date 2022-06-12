@@ -840,7 +840,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &118311750
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18245,6 +18245,12 @@ MonoBehaviour:
   revisi: {fileID: 1925897337}
   timerText: {fileID: 1737862011}
   revisiText: {fileID: 777828291}
+  gradeImage: {fileID: 244505020}
+  highScoreText: {fileID: 1504247591}
+  AGrade: {fileID: 21300000, guid: eaa860005a7620744b00500854279bfd, type: 3}
+  BGrade: {fileID: 21300000, guid: 72a4d908379d21141b20b1e1219e9cc2, type: 3}
+  CGrade: {fileID: 21300000, guid: edc2f454d7d7c8141bd6d0145fa65217, type: 3}
+  EGrade: {fileID: 21300000, guid: 856b9fd685d557c4ab9ee1a34b31c10d, type: 3}
 --- !u!212 &2033960989
 SpriteRenderer:
   m_ObjectHideFlags: 0
