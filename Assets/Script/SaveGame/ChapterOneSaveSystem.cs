@@ -24,7 +24,7 @@ public static class ChapterOneSaveSystem
         {
             ChapterData data = LoadGame();
 
-            if(timer.getTimer() < data.time && revisi.getRevisi() < data.jmlRevisi)
+            if(timer.getTimer() <= data.time && revisi.getRevisi() <= data.jmlRevisi)
             {
                 BinaryFormatter formatter = new BinaryFormatter();
                 FileStream stream = new FileStream(path, FileMode.Create);
