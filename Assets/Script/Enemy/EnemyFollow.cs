@@ -10,6 +10,9 @@ public class EnemyFollow : MonoBehaviour
     public Transform player;
     public Transform Skeleton;
     [SerializeField] Revisi revisi;
+    public GameObject trapObject;
+    public GameObject triggerTrap;
+    public BoxCollider2D boxCollider2D;
 
     public AudioSource sfxDog;
     public Animator anim;
@@ -19,11 +22,24 @@ public class EnemyFollow : MonoBehaviour
     [SerializeField]
     float speed;
 
+    Vector2 originalPos;
+
     Rigidbody2D rb;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        boxCollider2D = GetComponent<BoxCollider2D>();
+    }
+
+     private void Awake()
+    {
+        originalPos = transform.localPosition;
+    }
+
+    private void OnEnable()
+    {
+        transform.localPosition = originalPos;
     }
 
     void Update()
@@ -46,6 +62,8 @@ public class EnemyFollow : MonoBehaviour
 
     public void FollowPlayer()
     {
+        ResetObject reset = gameObject.GetComponent<ResetObject>();
+        reset.active();
         if(transform.position.x < player.position.x)
         {
             rb.velocity = new Vector2(speed, 0);
@@ -88,7 +106,7 @@ public class EnemyFollow : MonoBehaviour
         yield return new WaitForSeconds(time);
 
         ResetObject reset = gameObject.GetComponent<ResetObject>();
-        //reset.nonactive();
+        reset.nonactive();
         Debug.Log("reset");
     }
 }
