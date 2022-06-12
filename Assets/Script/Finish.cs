@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Finish : MonoBehaviour
 {
@@ -10,10 +11,11 @@ public class Finish : MonoBehaviour
     [SerializeField] Timer timer;
     [SerializeField] Revisi revisi;
 
-    [SerializeField] Text timerText;
-    [SerializeField] Text revisiText;
+    [SerializeField] TextMeshProUGUI timerText;
+    [SerializeField] TextMeshProUGUI revisiText;
     [SerializeField] GameObject gradeImage;
     [SerializeField] GameObject highScoreText;
+    [SerializeField] NumberCounter numberCounter;
     ChapterData dataChapOne;
 
     [Header("Grade Image")]
@@ -48,7 +50,8 @@ public class Finish : MonoBehaviour
             float seconds = Mathf.FloorToInt(timer.getTimer() % 60);
 
             timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
-            revisiText.text = revisi.getRevisi().ToString();
+            //revisiText.text = revisi.getRevisi().ToString();
+            numberCounter.Value = revisi.getRevisi();
 
             CheckHighScore();
             CheckGrade();
