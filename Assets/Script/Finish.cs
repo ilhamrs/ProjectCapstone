@@ -27,6 +27,8 @@ public class Finish : MonoBehaviour
     void Start()
     {
         finishMenu.SetActive(false);
+        highScoreText.SetActive(false);
+        gradeImage.SetActive(false);
         Time.timeScale = 1;
         dataChapOne = ChapterOneSaveSystem.LoadGame();
     }
@@ -53,13 +55,15 @@ public class Finish : MonoBehaviour
             //revisiText.text = revisi.getRevisi().ToString();
             numberCounter.Value = revisi.getRevisi();
 
-            CheckHighScore();
-            CheckGrade();
+            StartCoroutine(CheckHighScore());
+            StartCoroutine(CheckGrade());
         }
     }
 
-    void CheckGrade()
+    IEnumerator CheckGrade()
     {
+        yield return new WaitForSecondsRealtime(1);
+
         if (revisi.getRevisi() < 10)
         {
             gradeImage.GetComponent<Image>().sprite = AGrade;
@@ -76,10 +80,14 @@ public class Finish : MonoBehaviour
         {
             gradeImage.GetComponent<Image>().sprite = EGrade;
         }
+
+        gradeImage.SetActive(true);
     }
 
-    void CheckHighScore()
+    IEnumerator CheckHighScore()
     {
+        yield return new WaitForSecondsRealtime(2);
+
         if (revisi.getRevisi() <= dataChapOne.jmlRevisi && timer.getTimer() <= dataChapOne.time)
         {
             highScoreText.SetActive(true);
