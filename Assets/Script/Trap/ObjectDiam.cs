@@ -6,6 +6,9 @@ public class ObjectDiam : MonoBehaviour
 {
     [SerializeField] Revisi revisi;
     public BoxCollider2D boxCollider2D;
+
+    [Header("Trigger Reset")]
+    [SerializeField] Transform reset;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +24,7 @@ public class ObjectDiam : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            reset.GetComponent<Reset>().ActivateRoom(true);
             revisi.getHit();
             //StartCoroutine(Reset(1));
             //mungkin disini pengen ditambahin trigger event buat setactive checkpoint trap

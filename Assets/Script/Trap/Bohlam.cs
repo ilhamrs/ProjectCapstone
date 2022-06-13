@@ -7,15 +7,8 @@ public class Bohlam : MonoBehaviour
     [SerializeField] Revisi revisi;
     public BoxCollider2D boxCollider2D;
 
-    //public GameObject trapObject;
-    //public GameObject triggerTrap;
-    //public bool isRising = false;
-    //public float speed = 5;
-
-    //Vector2 originalPos;
-
-    //[Header("Reset Settings")]
-    //public UnityEvent TriggerEvent;
+    [Header("Trigger Reset")]
+    [SerializeField] Transform reset;
 
     private void Start()
     {
@@ -48,6 +41,7 @@ public class Bohlam : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            reset.GetComponent<Reset>().ActivateRoom(true);
             revisi.getHit();
             //StartCoroutine(Reset(1));
             //mungkin disini pengen ditambahin trigger event buat setactive checkpoint trap

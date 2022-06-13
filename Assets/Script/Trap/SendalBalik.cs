@@ -17,6 +17,9 @@ public class SendalBalik : MonoBehaviour
     private bool hit;
 
     Vector2 originalPos;
+
+    [Header("Trigger Reset")]
+    [SerializeField] Transform reset;
     // Start is called before the first frame update
     void Start()
     {
@@ -68,6 +71,7 @@ public class SendalBalik : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            reset.GetComponent<Reset>().ActivateRoom(true);
             hit = true;
             //base.OnTriggerEnter2D(collision); //Execute logic from parent script first
             coll.enabled = false;

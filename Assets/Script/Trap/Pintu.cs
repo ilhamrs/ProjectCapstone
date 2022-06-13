@@ -13,6 +13,9 @@ public class Pintu : MonoBehaviour
     private Animator anim;
 
     Vector2 originalPos;
+
+    [Header("Trigger Reset")]
+    [SerializeField] Transform reset;
     private void Start()
     {
         boxCollider2D = GetComponent<BoxCollider2D>();
@@ -20,6 +23,9 @@ public class Pintu : MonoBehaviour
 
         //ini buat bug yang awalnya animasi tidak jalan
         anim.SetTrigger("isOpen");
+        //ini buat bug yang collidernya ga ilang
+        delaykebuka();
+        
     }
 
     private void Awake()
@@ -44,6 +50,7 @@ public class Pintu : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            reset.GetComponent<Reset>().ActivateRoom(true);
             revisi.getHit();
             StartCoroutine(Reset(1));
             //mungkin disini pengen ditambahin trigger event buat setactive checkpoint trap
@@ -65,10 +72,14 @@ public class Pintu : MonoBehaviour
         StartCoroutine(Reset(1));
     }
 
-    IEnumerator Pintukebuka()
+    public IEnumerator Pintukebuka()
     {
         anim.SetTrigger("isOpen");
         yield return new WaitForSeconds(0.5f);
         boxCollider2D.enabled = false;
+    }
+    public void delaykebuka() 
+    {
+        StartCoroutine(Pintukebuka());
     }
 }

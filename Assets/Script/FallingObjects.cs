@@ -15,6 +15,9 @@ public class FallingObjects : MonoBehaviour
 
     Vector2 originalPos;
 
+    [Header("Trigger Reset")]
+    [SerializeField] Transform reset;
+
     //[Header("Reset Settings")]
     //public UnityEvent TriggerEvent;
 
@@ -67,6 +70,7 @@ public class FallingObjects : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            reset.GetComponent<Reset>().ActivateRoom(true);
             revisi.getHit();
             StartCoroutine(Reset(1));
             //mungkin disini pengen ditambahin trigger event buat setactive checkpoint trap

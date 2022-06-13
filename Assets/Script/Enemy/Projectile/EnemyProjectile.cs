@@ -16,6 +16,9 @@ public class EnemyProjectile : InstantDeath
 
     private bool hit;
 
+    [Header("Trigger Reset")]
+    [SerializeField] Transform reset;
+
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -58,6 +61,7 @@ public class EnemyProjectile : InstantDeath
     {
         if (collision.tag == "Player")
         {
+            reset.GetComponent<Reset>().ActivateRoom(true);
             hit = true;
             //base.OnTriggerEnter2D(collision); //Execute logic from parent script first
             coll.enabled = false;

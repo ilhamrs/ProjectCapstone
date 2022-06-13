@@ -11,6 +11,9 @@ public class Sendok : MonoBehaviour
     public bool isOpen = false;
 
     Vector2 originalPos;
+
+    [Header("Trigger Reset")]
+    [SerializeField] Transform reset;
     private void Start()
     {
         boxCollider2D = GetComponent<BoxCollider2D>();
@@ -38,6 +41,7 @@ public class Sendok : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            reset.GetComponent<Reset>().ActivateRoom(true);
             revisi.getHit();
             StartCoroutine(Reset(1));
             //mungkin disini pengen ditambahin trigger event buat setactive checkpoint trap

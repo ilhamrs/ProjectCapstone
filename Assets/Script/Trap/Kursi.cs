@@ -15,6 +15,8 @@ public class Kursi : MonoBehaviour
     private Animator anim;
 
     Vector2 originalPos;
+    [Header("Trigger Reset")]
+    [SerializeField] Transform reset;
     private void Start()
     {
         boxCollider2D = GetComponent<BoxCollider2D>();
@@ -47,7 +49,7 @@ public class Kursi : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            //Destroy(gameObject);
+            reset.GetComponent<Reset>().ActivateRoom(true);
             revisi.getHit();
             StartCoroutine(Reset(1));
         }

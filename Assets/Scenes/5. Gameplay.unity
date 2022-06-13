@@ -499,6 +499,7 @@ MonoBehaviour:
   rb: {fileID: 56230626}
   isMove: 0
   speed: 1
+  reset: {fileID: 1248394525}
 --- !u!114 &56230628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1538,6 +1539,7 @@ MonoBehaviour:
   triggerTrap: {fileID: 1038050328}
   boxCollider2D: {fileID: 240329147}
   isOpen: 0
+  reset: {fileID: 1179275129}
 --- !u!61 &240329147
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1919,12 +1921,12 @@ GameObject:
   - component: {fileID: 285338289}
   - component: {fileID: 285338288}
   m_Layer: 0
-  m_Name: TriggerReset(Taro Di Checkpoint) (1)
+  m_Name: ResetBangkit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &285338287
 Transform:
   m_ObjectHideFlags: 0
@@ -3183,6 +3185,7 @@ MonoBehaviour:
   triggerTrap: {fileID: 1797288774}
   boxCollider2D: {fileID: 424029672}
   isOpen: 0
+  reset: {fileID: 1179275129}
 --- !u!114 &424029674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3533,7 +3536,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &455520236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3979,12 +3982,12 @@ GameObject:
   - component: {fileID: 492713636}
   - component: {fileID: 492713635}
   m_Layer: 0
-  m_Name: TriggerReset(Taro Di Checkpoint) (2)
+  m_Name: ResetBukos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &492713634
 Transform:
   m_ObjectHideFlags: 0
@@ -4550,6 +4553,7 @@ MonoBehaviour:
   hurtSound: {fileID: 0}
   sfxJump: {fileID: 92164081}
   player: {fileID: 530272815}
+  reset: {fileID: 1248394525}
 --- !u!114 &530272818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5937,12 +5941,12 @@ GameObject:
   - component: {fileID: 640171576}
   - component: {fileID: 640171575}
   m_Layer: 0
-  m_Name: TriggerReset(Taro Di Checkpoint) (2)
+  m_Name: ResetAirGerak
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &640171574
 Transform:
   m_ObjectHideFlags: 0
@@ -8346,6 +8350,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   revisi: {fileID: 1925897337}
   boxCollider2D: {fileID: 804570480}
+  reset: {fileID: 1248394525}
 --- !u!1 &808229625
 GameObject:
   m_ObjectHideFlags: 0
@@ -8359,12 +8364,12 @@ GameObject:
   - component: {fileID: 808229628}
   - component: {fileID: 808229627}
   m_Layer: 0
-  m_Name: TriggerReset(Taro Di Checkpoint)
+  m_Name: ResetJatoh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &808229626
 Transform:
   m_ObjectHideFlags: 0
@@ -10893,12 +10898,12 @@ GameObject:
   - component: {fileID: 1053225018}
   - component: {fileID: 1053225017}
   m_Layer: 0
-  m_Name: TriggerReset(Taro Di Checkpoint) (1)
+  m_Name: ResetSendok
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1053225016
 Transform:
   m_ObjectHideFlags: 0
@@ -11407,6 +11412,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   revisi: {fileID: 1925897337}
   boxCollider2D: {fileID: 1081236989}
+  reset: {fileID: 1179275129}
 --- !u!1 &1096484926
 GameObject:
   m_ObjectHideFlags: 0
@@ -11673,6 +11679,7 @@ MonoBehaviour:
   boxCollider2D: {fileID: 1132928219}
   isFalling: 0
   fallspeed: 6
+  reset: {fileID: 1248394525}
 --- !u!61 &1132928219
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11719,7 +11726,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &1132928221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11889,12 +11896,12 @@ GameObject:
   - component: {fileID: 1152703510}
   - component: {fileID: 1152703509}
   m_Layer: 0
-  m_Name: TriggerReset(Taro Di Checkpoint)
+  m_Name: ResetJatoh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1152703508
 Transform:
   m_ObjectHideFlags: 0
@@ -12157,6 +12164,7 @@ MonoBehaviour:
   boxCollider2D: {fileID: 1155631095}
   isFalling: 0
   fallspeed: 6
+  reset: {fileID: 1179275129}
 --- !u!61 &1155631095
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12341,12 +12349,12 @@ GameObject:
   - component: {fileID: 1157018713}
   - component: {fileID: 1157018712}
   m_Layer: 0
-  m_Name: TriggerReset(Taro Di Checkpoint) (2)
+  m_Name: ResetKursi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1157018711
 Transform:
   m_ObjectHideFlags: 0
@@ -12534,7 +12542,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1166982663}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Player Lantai 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12565,6 +12573,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1179275129}
+  - component: {fileID: 1179275130}
   m_Layer: 0
   m_Name: Obstacles-Lantai2
   m_TagString: Untagged
@@ -12592,6 +12601,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1179275130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1179275128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc22bf0e38e41c5469ed55958efc704c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemies:
+  - {fileID: 640171573}
+  - {fileID: 1392397732}
+  - {fileID: 808229625}
+  - {fileID: 1053225015}
 --- !u!1 &1190282378
 GameObject:
   m_ObjectHideFlags: 0
@@ -12605,12 +12631,12 @@ GameObject:
   - component: {fileID: 1190282381}
   - component: {fileID: 1190282380}
   m_Layer: 0
-  m_Name: TriggerReset(Taro Di Checkpoint) (3)
+  m_Name: ResetBalik
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1190282379
 Transform:
   m_ObjectHideFlags: 0
@@ -13174,6 +13200,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1248394525}
+  - component: {fileID: 1248394526}
   m_Layer: 0
   m_Name: Obstacles-Lantai1
   m_TagString: Untagged
@@ -13200,6 +13227,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1248394526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248394524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc22bf0e38e41c5469ed55958efc704c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemies:
+  - {fileID: 492713633}
+  - {fileID: 1152703507}
+  - {fileID: 285338286}
+  - {fileID: 1190282378}
+  - {fileID: 1157018710}
 --- !u!1 &1251792922
 GameObject:
   m_ObjectHideFlags: 0
@@ -13819,6 +13864,7 @@ MonoBehaviour:
   hurtSound: {fileID: 0}
   sfxJump: {fileID: 92164081}
   player: {fileID: 1321778843}
+  reset: {fileID: 1179275129}
 --- !u!114 &1321778845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14174,12 +14220,12 @@ GameObject:
   - component: {fileID: 1392397735}
   - component: {fileID: 1392397734}
   m_Layer: 0
-  m_Name: TriggerReset(Taro Di Checkpoint) (1)
+  m_Name: ResetBukaPintu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1392397733
 Transform:
   m_ObjectHideFlags: 0
@@ -15268,6 +15314,7 @@ MonoBehaviour:
   trapObject: {fileID: 1494050436}
   triggerTrap: {fileID: 1743522239}
   coll: {fileID: 1494050441}
+  reset: {fileID: 1248394525}
 --- !u!1 &1499310650
 GameObject:
   m_ObjectHideFlags: 0
@@ -16256,6 +16303,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   revisi: {fileID: 1925897337}
   boxCollider2D: {fileID: 1607656912}
+  reset: {fileID: 1179275129}
 --- !u!1 &1625816172
 GameObject:
   m_ObjectHideFlags: 0
@@ -18001,6 +18049,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   revisi: {fileID: 1925897337}
   boxCollider2D: {fileID: 1751891060}
+  reset: {fileID: 1179275129}
 --- !u!95 &1751891062
 Animator:
   serializedVersion: 3
@@ -18697,7 +18746,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1860438683}
   m_Layer: 0
-  m_Name: Player2
+  m_Name: Player Lantai 1
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21858,6 +21907,7 @@ MonoBehaviour:
   boxCollider2D: {fileID: 6903364502707363492}
   isFalling: 0
   fallspeed: 5
+  reset: {fileID: 0}
 --- !u!114 &6903364502707363491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22260,6 +22310,7 @@ MonoBehaviour:
   boxCollider2D: {fileID: 6903364503332123607}
   isFalling: 0
   fallspeed: 3
+  reset: {fileID: 0}
 --- !u!95 &6903364503332123602
 Animator:
   serializedVersion: 3
@@ -23066,6 +23117,7 @@ MonoBehaviour:
   revisi: {fileID: 1925897337}
   trapObject: {fileID: 775316165}
   triggerTrap: {fileID: 1998276770}
+  reset: {fileID: 1248394525}
 --- !u!50 &7172253302402063646
 Rigidbody2D:
   serializedVersion: 4

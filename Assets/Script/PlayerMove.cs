@@ -27,7 +27,8 @@ public class PlayerMove : MonoBehaviour
 	[Header("Objects")]
 	[SerializeField] GameObject player;
 
-
+	[Header("Trigger Reset")]
+	[SerializeField] Transform reset;
 
 	private void Start()
     {
@@ -102,6 +103,8 @@ public class PlayerMove : MonoBehaviour
 		active = true;
 		col.enabled = true;
 		rb.gravityScale = 6;
+		yield return new WaitForSeconds(1f);
+		reset.GetComponent<Reset>().ActivateRoom(false);
 	}
 
 	private void Deactivate()
