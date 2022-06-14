@@ -27,7 +27,7 @@ public class PlayerSlide : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift) && playerMove.isMoving == true) 
+        if (Input.GetKeyDown(KeyCode.LeftShift) && playerMove.isMoving == true && playerMove.IsGrounded == true && isSliding == false) 
         {
             perfomSlide();
         }

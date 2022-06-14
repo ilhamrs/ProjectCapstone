@@ -16,7 +16,7 @@ public class PlayerMove : MonoBehaviour
 	public float JumpForce = 15;
 	public Vector2 Checkpoint;
 	public bool active = true;
-	[SerializeField] bool IsGrounded;
+	public bool IsGrounded;
 	public bool isMoving;
 
 	[Header("SFX")]
