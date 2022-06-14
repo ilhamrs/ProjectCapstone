@@ -30,7 +30,7 @@ public class Hardcode_FadeOut : MonoBehaviour
     void FadeOut()
     {
         //Membuat warna TargetImage pakai transisi Lerp dari transparan ke warna dasar gambar
-        TargetImage.color = Color.Lerp(TargetImage.color, Color.black, FadeSpeed * Time.deltaTime);
+        TargetImage.color = Color.Lerp(TargetImage.color, Color.white, FadeSpeed * Time.deltaTime);
     }
     // Start is called before the first frame update
     void Start()

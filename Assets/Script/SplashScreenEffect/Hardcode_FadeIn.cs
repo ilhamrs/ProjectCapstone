@@ -1,8 +1,4 @@
-﻿/*
- * Desc     : Membuat fungsi fade in menggunakan komponen Image
- * Author   : Rickman Roedavan
-*/
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
