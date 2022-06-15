@@ -21,7 +21,7 @@ public class PlayerMove : MonoBehaviour
 
 	[Header("SFX")]
 	[SerializeField] private AudioSource deathSound;
-	[SerializeField] private AudioClip hurtSound;
+	[SerializeField] private AudioSource jatohSound;
 	public AudioSource sfxJump;
 
 	[Header("Objects")]
@@ -121,6 +121,7 @@ public class PlayerMove : MonoBehaviour
 		rb.gravityScale = 0;
 		rb.constraints = RigidbodyConstraints2D.FreezeAll;
 		deathSound.Play();
+		jatohSound.Play();
 		StartCoroutine(revisiPanel.showPanel());
 		StartCoroutine(Respawns());
 	}
