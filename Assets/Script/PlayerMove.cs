@@ -99,6 +99,7 @@ public class PlayerMove : MonoBehaviour
 	public IEnumerator Respawns() 
 	{
 		yield return new WaitForSeconds(1f);
+		IsGrounded = true;
 		rb.constraints &= ~RigidbodyConstraints2D.FreezePosition;
 		transform.position = Checkpoint;
 		active = true;
