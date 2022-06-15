@@ -5,11 +5,15 @@ using UnityEngine;
 public class PintuBukos : MonoBehaviour
 {
     private Animator anim;
+    [SerializeField] private AudioSource suaraPintu;
+    [SerializeField] private AudioSource suaraMarah;
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
         anim.SetTrigger("isOpen");
+        suaraMarah.Play();
+        suaraPintu.Play();
 
     }
     public void animasiBukaPintu()

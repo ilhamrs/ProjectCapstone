@@ -59,11 +59,13 @@ public class PlayerSlide : MonoBehaviour
 
     IEnumerator stopslide() 
     {
-        yield return new WaitForSeconds(0.8f);
-        anim.SetBool("goSlide", false);
-        regularColl.enabled = true;
-        slideColl.enabled = false;
-        isSliding = false;
+            yield return new WaitForSeconds(1.1f);
+            anim.SetBool("goSlide", false);
+            slideColl.enabled = false;
+            isSliding = false;
+            yield return new WaitForSeconds(0.3f);
+            regularColl.enabled = true;
+
     }
     void DoDelayAction()
     {

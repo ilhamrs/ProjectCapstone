@@ -21,11 +21,12 @@ public class PlayerMove : MonoBehaviour
 
 	[Header("SFX")]
 	[SerializeField] private AudioSource deathSound;
-	[SerializeField] private AudioClip hurtSound;
+	[SerializeField] private AudioSource jatohSound;
 	public AudioSource sfxJump;
 
 	[Header("Objects")]
 	[SerializeField] GameObject player;
+	[SerializeField] RevisiPanel revisiPanel;
 
 	[Header("Trigger Reset")]
 	[SerializeField] Transform reset;
@@ -120,6 +121,8 @@ public class PlayerMove : MonoBehaviour
 		rb.gravityScale = 0;
 		rb.constraints = RigidbodyConstraints2D.FreezeAll;
 		deathSound.Play();
+		jatohSound.Play();
+		StartCoroutine(revisiPanel.showPanel());
 		StartCoroutine(Respawns());
 	}
 	public void SetRespawnPoint(Vector2 position) 

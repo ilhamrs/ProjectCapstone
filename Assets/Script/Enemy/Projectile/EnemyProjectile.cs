@@ -13,6 +13,7 @@ public class EnemyProjectile : InstantDeath
     private float direction;
     private Animator anim;
     private BoxCollider2D coll;
+    [SerializeField] private AudioSource sendalSound;
 
     private bool hit;
 
@@ -41,6 +42,7 @@ public class EnemyProjectile : InstantDeath
         ResetObject reset = gameObject.GetComponent<ResetObject>();
         reset.active();
 
+        sendalSound.Play();
         hit = false;
         direction = projectile_direction;
         lifetime = 0;
