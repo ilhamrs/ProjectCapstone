@@ -4908,6 +4908,7 @@ MonoBehaviour:
   hurtSound: {fileID: 0}
   sfxJump: {fileID: 92164081}
   player: {fileID: 530272815}
+  revisiPanel: {fileID: 1675216880}
   reset: {fileID: 1248394525}
 --- !u!114 &530272818
 MonoBehaviour:
@@ -14473,6 +14474,7 @@ MonoBehaviour:
   hurtSound: {fileID: 0}
   sfxJump: {fileID: 92164081}
   player: {fileID: 1321778843}
+  revisiPanel: {fileID: 1675216880}
   reset: {fileID: 1179275129}
 --- !u!114 &1321778845
 MonoBehaviour:
@@ -17369,13 +17371,14 @@ GameObject:
   - component: {fileID: 1675216877}
   - component: {fileID: 1675216879}
   - component: {fileID: 1675216878}
+  - component: {fileID: 1675216880}
   m_Layer: 5
   m_Name: RevisiPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1675216877
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17435,6 +17438,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1675216876}
   m_CullTransparentMesh: 1
+--- !u!114 &1675216880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675216876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32cd9d63848a2d44889e90385451b23e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  revisiPanel: {fileID: 1675216876}
+  revisi: {fileID: 1925897337}
+  revisiText: {fileID: 2033075990}
 --- !u!1 &1685127051
 GameObject:
   m_ObjectHideFlags: 0

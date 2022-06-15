@@ -26,6 +26,7 @@ public class PlayerMove : MonoBehaviour
 
 	[Header("Objects")]
 	[SerializeField] GameObject player;
+	[SerializeField] RevisiPanel revisiPanel;
 
 	[Header("Trigger Reset")]
 	[SerializeField] Transform reset;
@@ -120,6 +121,7 @@ public class PlayerMove : MonoBehaviour
 		rb.gravityScale = 0;
 		rb.constraints = RigidbodyConstraints2D.FreezeAll;
 		deathSound.Play();
+		revisiPanel.showPanel();
 		StartCoroutine(Respawns());
 	}
 	public void SetRespawnPoint(Vector2 position) 
