@@ -72,6 +72,7 @@ public class FallingObjects : MonoBehaviour
         {
             reset.GetComponent<Reset>().ActivateRoom(true);
             revisi.getHit();
+            boxCollider2D.enabled = false;
             StartCoroutine(Reset(1));
             //mungkin disini pengen ditambahin trigger event buat setactive checkpoint trap
         }
@@ -89,6 +90,7 @@ public class FallingObjects : MonoBehaviour
         //nyalain trigger matiin object
         ResetObject reset = gameObject.GetComponent<ResetObject>();
         reset.nonactive();
+        boxCollider2D.enabled = true;
         Debug.Log("reset");
     }
 
