@@ -121,7 +121,7 @@ public class PlayerMove : MonoBehaviour
 		rb.gravityScale = 0;
 		rb.constraints = RigidbodyConstraints2D.FreezeAll;
 		deathSound.Play();
-		revisiPanel.showPanel();
+		StartCoroutine(revisiPanel.showPanel());
 		StartCoroutine(Respawns());
 	}
 	public void SetRespawnPoint(Vector2 position) 

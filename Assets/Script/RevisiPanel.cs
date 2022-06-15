@@ -22,8 +22,9 @@ public class RevisiPanel : MonoBehaviour
         
     }
 
-    public void showPanel()
+    public IEnumerator showPanel()
     {
+        yield return new WaitForSeconds(0.7f);
         revisiPanel.SetActive(true);
         revisiText.text = revisi.getRevisi().ToString();
         StartCoroutine(hidePanel());
@@ -31,7 +32,7 @@ public class RevisiPanel : MonoBehaviour
 
     public IEnumerator hidePanel()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         revisiPanel.SetActive(false);
     }
 }
