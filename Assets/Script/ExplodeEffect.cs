@@ -66,7 +66,7 @@ public class ExplodeEffect : MonoBehaviour
     }
     IEnumerator delayExplode() 
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         trapObject.SetActive(false);
     }
 }
