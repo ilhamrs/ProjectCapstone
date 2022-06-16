@@ -27,6 +27,9 @@ public class EnemyFollow : MonoBehaviour
     bool getBone;
 
     Rigidbody2D rb;
+
+    [Header("Trigger Reset")]
+    [SerializeField] Transform reset;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -101,6 +104,7 @@ public class EnemyFollow : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
+            reset.GetComponent<Reset>().ActivateRoom(true);
             revisi.getHit();
             boxCollider2D.enabled = false;
             StartCoroutine(Reset(1));
