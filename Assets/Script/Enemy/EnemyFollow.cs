@@ -24,6 +24,8 @@ public class EnemyFollow : MonoBehaviour
 
     Vector2 originalPos;
 
+    bool getBone;
+
     Rigidbody2D rb;
     void Start()
     {
@@ -35,11 +37,13 @@ public class EnemyFollow : MonoBehaviour
      private void Awake()
     {
         originalPos = transform.localPosition;
+        getBone = false;
     }
 
     private void OnEnable()
     {
         transform.localPosition = originalPos;
+        getBone = false;
     }
 
     void Update()
@@ -47,16 +51,16 @@ public class EnemyFollow : MonoBehaviour
         float distance = Vector2.Distance(transform.position, player.position);
         float distance1 = Vector2.Distance(transform.position, Skeleton.position);
 
-        if(distance < Range)
+        if(distance < Range && !getBone)
         {
             anim.SetTrigger("Run");
             FollowPlayer();
         }
         else if (distance1 < Range) 
         {
-            FollowTulang();
+            //FollowTulang();
             //distance - 5;
-            anim.SetTrigger("Take");
+            //anim.SetTrigger("Take");
         }
     }
 
@@ -98,6 +102,12 @@ public class EnemyFollow : MonoBehaviour
         {
             revisi.getHit();
             StartCoroutine(Reset(1));
+        }
+
+        if(collision.tag == "Skeleton")
+        {
+            anim.SetTrigger("Take");
+            getBone = true;
         }
     }
 
