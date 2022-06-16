@@ -372,7 +372,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 387952343}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 5377022327d11da41a4851725745cd76, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 5ab94961e6025534fa0529127960f999, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 387952345}
@@ -1093,7 +1093,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FadeSpeed: 2
-  Delay: 60
+  Delay: 72
 --- !u!114 &1678913412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1409,7 +1409,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TargetScene: 5. Gameplay
-  Delay: 62
+  Delay: 73
 --- !u!4 &2046725894
 Transform:
   m_ObjectHideFlags: 0
