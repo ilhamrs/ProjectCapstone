@@ -33,4 +33,8 @@ public class PauseMenuEsc : MonoBehaviour
     {
         StartEvent.Invoke();
     }
+    public void delay() 
+    {
+        gameObject.SetActive(true);
+    }
 }
