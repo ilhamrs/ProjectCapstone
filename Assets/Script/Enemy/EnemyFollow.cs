@@ -70,18 +70,15 @@ public class EnemyFollow : MonoBehaviour
     {
         ResetObject reset = gameObject.GetComponent<ResetObject>();
         reset.active();
-        sfxDog.Play();
         if (transform.position.x < player.position.x)
         {
             rb.velocity = new Vector2(speed, 0);
             transform.localScale = new Vector2(1, 1);
-            sfxDog.Play();
         }
         else 
         {
             rb.velocity = new Vector2(-speed, 0);
             transform.localScale = new Vector2(-1, 1);
-            sfxDog.Play();
         }
     }
 
@@ -105,7 +102,7 @@ public class EnemyFollow : MonoBehaviour
         if(collision.tag == "Player")
         {
             revisi.getHit();
-            //boxCollider2D.enabled = false;
+            boxCollider2D.enabled = false;
             StartCoroutine(Reset(1));
         }
 
@@ -113,6 +110,7 @@ public class EnemyFollow : MonoBehaviour
         {
             anim.SetTrigger("Take");
             getBone = true;
+            boxCollider2D.enabled = false;
         }
     }
 
@@ -122,7 +120,7 @@ public class EnemyFollow : MonoBehaviour
 
         ResetObject reset = gameObject.GetComponent<ResetObject>();
         reset.nonactive();
-        //boxCollider2D.enabled = true;
+        boxCollider2D.enabled = true;
         Debug.Log("reset");
     }
 }
