@@ -14,6 +14,8 @@ public class BurungKanan : MonoBehaviour
     private Animator anim;
     public BoxCollider2D coll;
 
+    public AudioSource burungTerbang;
+
     Vector2 originalPos;
     private bool hit;
 
@@ -25,6 +27,7 @@ public class BurungKanan : MonoBehaviour
         coll = GetComponent<BoxCollider2D>();
         anim = GetComponent<Animator>();
         ActivateProjectile(1);
+        burungTerbang.Play();
     }
     private void Awake()
     {
