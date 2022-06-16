@@ -32,6 +32,8 @@ public class EnemyFollow : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         boxCollider2D = GetComponent<BoxCollider2D>();
+
+        sfxDog.Play();
     }
 
      private void Awake()
@@ -68,16 +70,18 @@ public class EnemyFollow : MonoBehaviour
     {
         ResetObject reset = gameObject.GetComponent<ResetObject>();
         reset.active();
-        if(transform.position.x < player.position.x)
+        //sfxDog.Play();
+        if (transform.position.x < player.position.x)
         {
             rb.velocity = new Vector2(speed, 0);
             transform.localScale = new Vector2(1, 1);
-            sfxDog.Play();
+            //sfxDog.Play();
         }
         else 
         {
             rb.velocity = new Vector2(-speed, 0);
             transform.localScale = new Vector2(-1, 1);
+            //sfxDog.Play();
         }
     }
 

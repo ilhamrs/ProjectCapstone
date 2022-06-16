@@ -51,20 +51,20 @@ public class FallingObjects : MonoBehaviour
     }
 
     //ini ga terlalu kepake
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if (collision.gameObject.tag == "Player")
-    //    {
-    //        //Destroy(gameObject);
-    //        revisi.getHit();
-    //        StartCoroutine(Reset(1));
-    //    }
-    //    else
-    //    {
-    //        rb.gravityScale = 0;
-    //        boxCollider2D.enabled = false;
-    //    }
-    //}
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            //Destroy(gameObject);
+            revisi.getHit();
+            StartCoroutine(Reset(1));
+        }
+        else
+        {
+            rb.gravityScale = 0;
+            boxCollider2D.enabled = false;
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
