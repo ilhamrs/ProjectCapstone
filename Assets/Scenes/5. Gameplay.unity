@@ -9134,7 +9134,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.43674657, y: 0}
+  m_Offset: {x: 0.2886407, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -9145,7 +9145,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.12650687, y: 1}
+  m_Size: {x: 0.42271858, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &492713637
 SpriteRenderer:
@@ -10140,7 +10140,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.04935074, y: 0.30234253}
+  m_Offset: {x: -0.06396675, y: 0.30234253}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -10151,7 +10151,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.02166, y: 0.99372315}
+  m_Size: {x: 0.63274384, y: 0.99372315}
   m_EdgeRadius: 0
 --- !u!50 &530272820
 Rigidbody2D:
@@ -18819,10 +18819,10 @@ MonoBehaviour:
   TriggerEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 959629353}
-        m_TargetAssemblyTypeName: EnemyFollow, Assembly-CSharp
-        m_MethodName: FollowPlayer
-        m_Mode: 1
+      - m_Target: {fileID: 959629352}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -19758,7 +19758,6 @@ GameObject:
   - component: {fileID: 959629357}
   - component: {fileID: 959629358}
   - component: {fileID: 959629356}
-  - component: {fileID: 959629353}
   - component: {fileID: 959629361}
   - component: {fileID: 959629359}
   - component: {fileID: 959629360}
@@ -19770,28 +19769,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &959629353
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 959629352}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d891ec62d17ec5408b0c372f8f1fee6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1610109026}
-  Skeleton: {fileID: 204752547}
-  revisi: {fileID: 1925897337}
-  trapObject: {fileID: 0}
-  triggerTrap: {fileID: 0}
-  boxCollider2D: {fileID: 0}
-  sfxDog: {fileID: 1956751179}
-  anim: {fileID: 959629360}
-  Range: 10
-  speed: 5
 --- !u!212 &959629354
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -19869,7 +19846,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -19891,7 +19868,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.015971184, y: -0.0069895387}
+  m_Offset: {x: -0.022172868, y: -0.62339723}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -19902,7 +19879,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.1179361, y: 2.0698972}
+  m_Size: {x: 1.7835618, y: 0.55317473}
   m_EdgeRadius: 0
 --- !u!61 &959629358
 BoxCollider2D:
@@ -19917,7 +19894,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.016458988, y: 0}
+  m_Offset: {x: 0.06807476, y: -0.796579}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -19928,7 +19905,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.053081, y: 2}
+  m_Size: {x: 1.1755699, y: 0.07131314}
   m_EdgeRadius: 0
 --- !u!114 &959629359
 MonoBehaviour:
@@ -24301,7 +24278,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1166982663
 Transform:
   m_ObjectHideFlags: 0
