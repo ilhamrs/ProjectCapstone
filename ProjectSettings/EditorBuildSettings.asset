@@ -6,13 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/1. PublisherSplashScreen.unity
+    path: Assets/Scenes/SceneSimpanan/1. PublisherSplashScreen.unity
     guid: 2e7fbdffe9ade614a9fe39a45356dc24
   - enabled: 0
-    path: Assets/Scenes/2. DeveloperSplashScreen.unity
+    path: Assets/Scenes/SceneSimpanan/2. DeveloperSplashScreen.unity
     guid: 2b765b3e7fb6f3b4cbe131a641cc0dc5
   - enabled: 1
-    path: Assets/Scenes/1. IntroSplashScreen.unity
+    path: Assets/Scenes/1.2. IntroSplashScreen.unity
     guid: 68ed1b43e8705194cba608fc7509c24b
   - enabled: 1
     path: Assets/Scenes/3. MainMenu.unity
