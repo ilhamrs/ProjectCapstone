@@ -24,22 +24,31 @@ public class EnemyFollow : MonoBehaviour
 
     Vector2 originalPos;
 
+    bool getBone;
+
     Rigidbody2D rb;
+
+    [Header("Trigger Reset")]
+    [SerializeField] Transform reset;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         boxCollider2D = GetComponent<BoxCollider2D>();
+
+        sfxDog.Play();
     }
 
      private void Awake()
     {
         originalPos = transform.localPosition;
+        getBone = false;
     }
 
     private void OnEnable()
     {
         transform.localPosition = originalPos;
+        getBone = false;
     }
 
     void Update()
@@ -47,16 +56,16 @@ public class EnemyFollow : MonoBehaviour
         float distance = Vector2.Distance(transform.position, player.position);
         float distance1 = Vector2.Distance(transform.position, Skeleton.position);
 
-        if(distance < Range)
+        if(distance < Range && !getBone)
         {
             anim.SetTrigger("Run");
             FollowPlayer();
         }
         else if (distance1 < Range) 
         {
-            FollowTulang();
+            //FollowTulang();
             //distance - 5;
-            anim.SetTrigger("Take");
+            //anim.SetTrigger("Take");
         }
     }
 
@@ -64,11 +73,10 @@ public class EnemyFollow : MonoBehaviour
     {
         ResetObject reset = gameObject.GetComponent<ResetObject>();
         reset.active();
-        if(transform.position.x < player.position.x)
+        if (transform.position.x < player.position.x)
         {
             rb.velocity = new Vector2(speed, 0);
             transform.localScale = new Vector2(1, 1);
-            sfxDog.Play();
         }
         else 
         {
@@ -96,8 +104,17 @@ public class EnemyFollow : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
+            reset.GetComponent<Reset>().ActivateRoom(true);
             revisi.getHit();
+            boxCollider2D.enabled = false;
             StartCoroutine(Reset(1));
+        }
+
+        if(collision.tag == "Skeleton")
+        {
+            anim.SetTrigger("Take");
+            getBone = true;
+            boxCollider2D.enabled = false;
         }
     }
 
@@ -107,6 +124,7 @@ public class EnemyFollow : MonoBehaviour
 
         ResetObject reset = gameObject.GetComponent<ResetObject>();
         reset.nonactive();
+        boxCollider2D.enabled = true;
         Debug.Log("reset");
     }
 }
