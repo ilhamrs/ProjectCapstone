@@ -24,6 +24,6 @@ EditorBuildSettings:
     path: Assets/Scenes/4.1 CutsceneCh1.unity
     guid: d185f9f4b7218224d95363430b4f66a0
   - enabled: 1
-    path: Assets/Scenes/5. Gameplay.unity
+    path: Assets/Scenes/5. Gameplay_1.unity
     guid: d593cb83e181bbe4cbd6b6cf303e5630
   m_configObjects: {}
