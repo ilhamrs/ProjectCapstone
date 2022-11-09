@@ -788,6 +788,7 @@ GameObject:
   m_Component:
   - component: {fileID: 372678612}
   - component: {fileID: 372678613}
+  - component: {fileID: 372678614}
   m_Layer: 0
   m_Name: MainMenuManager
   m_TagString: Untagged
@@ -824,6 +825,18 @@ MonoBehaviour:
   MainPanel: {fileID: 1144159043}
   SettingPanel: {fileID: 1313007330}
   CreditsPanel: {fileID: 395475368}
+--- !u!114 &372678614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 372678611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 957f0974a0cd8a647a63590aef9d9f27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &376101961
 GameObject:
   m_ObjectHideFlags: 0
