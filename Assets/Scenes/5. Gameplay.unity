@@ -34232,8 +34232,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1321778843}
-  offset: -17.8
   offsetSmoothing: 7
+  isRight: 1
 --- !u!1 &1436540197
 GameObject:
   m_ObjectHideFlags: 0
@@ -49825,8 +49825,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1321778843}
-  offset: 17.8
   offsetSmoothing: 7
+  isRight: 0
 --- !u!114 &2108862749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50720,8 +50720,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1610109017}
-  offset: 17.8
   offsetSmoothing: 7
+  isRight: 0
 --- !u!114 &2299089944165926109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50847,8 +50847,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 530272815}
-  offset: 17.8
   offsetSmoothing: 7
+  isRight: 0
 --- !u!114 &3548248544861139610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51031,8 +51031,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1610109017}
-  offset: -17.8
   offsetSmoothing: 7
+  isRight: 1
 --- !u!4 &4079512952427658032
 Transform:
   m_ObjectHideFlags: 0
@@ -52620,5 +52620,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 530272815}
-  offset: -17.8
   offsetSmoothing: 7
+  isRight: 1
