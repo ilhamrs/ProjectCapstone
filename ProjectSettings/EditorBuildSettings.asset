@@ -23,10 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/4.1 CutsceneCh1.unity
     guid: d185f9f4b7218224d95363430b4f66a0
-  - enabled: 0
-    path: Assets/Scenes/5. Gameplay_1.unity
-    guid: d593cb83e181bbe4cbd6b6cf303e5630
   - enabled: 1
     path: Assets/Scenes/5. Gameplay.unity
     guid: 38c4e47cb28337441990f1ecf0c2b294
+  - enabled: 1
+    path: Assets/Scenes/5. Gameplay_backup.unity
+    guid: 5a2b11ec243d5c041a1458a77cfabe46
   m_configObjects: {}
