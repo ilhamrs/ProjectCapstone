@@ -1585,6 +1585,7 @@ GameObject:
   m_Component:
   - component: {fileID: 81997076}
   - component: {fileID: 81997077}
+  - component: {fileID: 81997078}
   m_Layer: 0
   m_Name: BadanJatoh
   m_TagString: Untagged
@@ -1702,6 +1703,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &81997078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81997075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373ad8f723b0705438757365d76ab6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Key: SFX
 --- !u!1 &82601281
 GameObject:
   m_ObjectHideFlags: 0
@@ -9666,6 +9680,7 @@ GameObject:
   m_Component:
   - component: {fileID: 452947725}
   - component: {fileID: 452947726}
+  - component: {fileID: 452947727}
   m_Layer: 0
   m_Name: Lamp Broken
   m_TagString: Untagged
@@ -9783,6 +9798,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &452947727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452947724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373ad8f723b0705438757365d76ab6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Key: SFX
 --- !u!1 &455520232
 GameObject:
   m_ObjectHideFlags: 0
@@ -10205,6 +10233,7 @@ GameObject:
   m_Component:
   - component: {fileID: 470965251}
   - component: {fileID: 470965252}
+  - component: {fileID: 470965253}
   m_Layer: 0
   m_Name: BirdFly
   m_TagString: Untagged
@@ -10322,6 +10351,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &470965253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470965250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373ad8f723b0705438757365d76ab6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Key: SFX
 --- !u!1 &472665163
 GameObject:
   m_ObjectHideFlags: 0
@@ -16349,6 +16391,7 @@ GameObject:
   m_Component:
   - component: {fileID: 682235030}
   - component: {fileID: 682235031}
+  - component: {fileID: 682235032}
   m_Layer: 0
   m_Name: Ember
   m_TagString: Untagged
@@ -16466,6 +16509,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &682235032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682235029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373ad8f723b0705438757365d76ab6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Key: SFX
 --- !u!1 &685806095
 GameObject:
   m_ObjectHideFlags: 0
@@ -19190,6 +19246,7 @@ GameObject:
   m_Component:
   - component: {fileID: 812055166}
   - component: {fileID: 812055167}
+  - component: {fileID: 812055168}
   m_Layer: 0
   m_Name: Suarameng
   m_TagString: Untagged
@@ -19307,6 +19364,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &812055168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812055165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373ad8f723b0705438757365d76ab6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Key: SFX
 --- !u!1 &817561791
 GameObject:
   m_ObjectHideFlags: 0
@@ -20154,6 +20224,7 @@ GameObject:
   m_Component:
   - component: {fileID: 864788652}
   - component: {fileID: 864788653}
+  - component: {fileID: 864788654}
   m_Layer: 0
   m_Name: Sendal
   m_TagString: Untagged
@@ -20271,6 +20342,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &864788654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864788651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373ad8f723b0705438757365d76ab6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Key: SFX
 --- !u!1 &865981347
 GameObject:
   m_ObjectHideFlags: 0
@@ -30969,6 +31053,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1298013875}
   - component: {fileID: 1298013876}
+  - component: {fileID: 1298013877}
   m_Layer: 0
   m_Name: BukosMarah
   m_TagString: Untagged
@@ -31086,6 +31171,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1298013877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298013874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373ad8f723b0705438757365d76ab6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Key: SFX
 --- !u!1 &1300361462
 GameObject:
   m_ObjectHideFlags: 0
@@ -33725,6 +33823,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1420026090}
   - component: {fileID: 1420026091}
+  - component: {fileID: 1420026092}
   m_Layer: 0
   m_Name: AirGerak
   m_TagString: Untagged
@@ -33842,6 +33941,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1420026092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420026089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373ad8f723b0705438757365d76ab6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Key: SFX
 --- !u!1 &1420831687
 GameObject:
   m_ObjectHideFlags: 0
@@ -36266,6 +36378,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1523962514}
   - component: {fileID: 1523962515}
+  - component: {fileID: 1523962516}
   m_Layer: 0
   m_Name: Air
   m_TagString: Untagged
@@ -36383,6 +36496,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1523962516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1523962513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373ad8f723b0705438757365d76ab6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Key: SFX
 --- !u!1 &1526691652
 GameObject:
   m_ObjectHideFlags: 0
@@ -37813,6 +37939,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1607260410}
   - component: {fileID: 1607260411}
+  - component: {fileID: 1607260412}
   m_Layer: 0
   m_Name: KursiGerak
   m_TagString: Untagged
@@ -37930,6 +38057,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1607260412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1607260409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373ad8f723b0705438757365d76ab6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Key: SFX
 --- !u!1 &1607656911
 GameObject:
   m_ObjectHideFlags: 0
@@ -41861,6 +42001,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1745826327}
   - component: {fileID: 1745826328}
+  - component: {fileID: 1745826329}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -41978,6 +42119,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1745826329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745826326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373ad8f723b0705438757365d76ab6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Key: SFX
 --- !u!1 &1749695566
 GameObject:
   m_ObjectHideFlags: 0
@@ -41988,6 +42142,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1749695567}
   - component: {fileID: 1749695568}
+  - component: {fileID: 1749695569}
   m_Layer: 0
   m_Name: OrangBukaPintu
   m_TagString: Untagged
@@ -42105,6 +42260,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1749695569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749695566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373ad8f723b0705438757365d76ab6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Key: SFX
 --- !u!1 &1751016300
 GameObject:
   m_ObjectHideFlags: 0
@@ -45826,6 +45994,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1936814765}
   - component: {fileID: 1936814766}
+  - component: {fileID: 1936814767}
   m_Layer: 0
   m_Name: LampuBangkit
   m_TagString: Untagged
@@ -45943,6 +46112,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1936814767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936814764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373ad8f723b0705438757365d76ab6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Key: SFX
 --- !u!1 &1938174253
 GameObject:
   m_ObjectHideFlags: 0
@@ -47003,6 +47185,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1983178666}
   - component: {fileID: 1983178667}
+  - component: {fileID: 1983178668}
   m_Layer: 0
   m_Name: KenaSendok
   m_TagString: Untagged
@@ -47120,6 +47303,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1983178668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983178665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373ad8f723b0705438757365d76ab6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Key: SFX
 --- !u!1 &1986790183
 GameObject:
   m_ObjectHideFlags: 0
@@ -48510,6 +48706,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2054280083}
   - component: {fileID: 2054280084}
+  - component: {fileID: 2054280085}
   m_Layer: 0
   m_Name: Death
   m_TagString: Untagged
@@ -48627,6 +48824,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2054280085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054280082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373ad8f723b0705438757365d76ab6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Key: SFX
 --- !u!1 &2054397591
 GameObject:
   m_ObjectHideFlags: 0
