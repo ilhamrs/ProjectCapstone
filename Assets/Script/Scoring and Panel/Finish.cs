@@ -23,6 +23,9 @@ public class Finish : MonoBehaviour
     [SerializeField] Sprite BGrade;
     [SerializeField] Sprite CGrade;
     [SerializeField] Sprite EGrade;
+
+    [Header("Chapter Name")]
+    [SerializeField] string name;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +33,7 @@ public class Finish : MonoBehaviour
         highScoreText.SetActive(false);
         gradeImage.SetActive(false);
         Time.timeScale = 1;
-        dataChapOne = ChapterOneSaveSystem.LoadGame();
+        dataChapOne = ChapterOneSaveSystem.LoadGame(name);
     }
 
     // Update is called once per frame
@@ -43,7 +46,7 @@ public class Finish : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
-            ChapterOneSaveSystem.SaveGame(timer, revisi);
+            ChapterOneSaveSystem.SaveGame(timer, revisi, name);
 
             Time.timeScale = 0;
             finishMenu.SetActive(true);

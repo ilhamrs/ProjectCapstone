@@ -6,9 +6,10 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 public static class ChapterOneSaveSystem
 {
-    public static void SaveGame(Timer timer, Revisi revisi)
+    public static void SaveGame(Timer timer, Revisi revisi, string chapName)
     {
-        string path = Application.persistentDataPath + "/chapOne.sav";
+        string chapterName = "/" + chapName + ".sav";
+        string path = Application.persistentDataPath + chapterName;
 
         if (!File.Exists(path))
         {
@@ -22,7 +23,7 @@ public static class ChapterOneSaveSystem
         }
         else
         {
-            ChapterData data = LoadGame();
+            ChapterData data = LoadGame(chapName);
 
             if(timer.getTimer() <= data.time && revisi.getRevisi() <= data.jmlRevisi)
             {
@@ -39,10 +40,11 @@ public static class ChapterOneSaveSystem
     }
 
     //jika tidak ada savegame
-    public static void SaveGame()
+    public static void SaveGame(string chapName)
     {
         BinaryFormatter formatter = new BinaryFormatter();
-        string path = Application.persistentDataPath + "/chapOne.sav";
+        string chapterName = "/" + chapName + ".sav";
+        string path = Application.persistentDataPath + chapterName;
         FileStream stream = new FileStream(path, FileMode.Create);
 
         ChapterData data = new ChapterData();
@@ -51,9 +53,10 @@ public static class ChapterOneSaveSystem
         stream.Close();
     }
 
-    public static ChapterData LoadGame()
+    public static ChapterData LoadGame(string chapName)
     {
-        string path = Application.persistentDataPath + "/chapOne.sav";
+        string chapterName = "/" + chapName + ".sav";
+        string path = Application.persistentDataPath + chapterName;
         if (File.Exists(path))
         {
             BinaryFormatter formatter = new BinaryFormatter();

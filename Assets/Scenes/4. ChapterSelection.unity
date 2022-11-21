@@ -14514,6 +14514,9 @@ MonoBehaviour:
   chapOneTime: {fileID: 1162953578}
   chapOneRevision: {fileID: 1947171961}
   chapOneGrade: {fileID: 2119691434}
+  chapOneHardTime: {fileID: 2146539497}
+  chapOneHardRevision: {fileID: 749204907}
+  chapOneHardGrade: {fileID: 298382380}
 --- !u!4 &1747233369
 Transform:
   m_ObjectHideFlags: 0
