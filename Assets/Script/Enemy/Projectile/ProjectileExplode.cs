@@ -23,7 +23,7 @@ public class ProjectileExplode : MonoBehaviour
         if (collision.tag == "Ground")
         {
             anim.SetTrigger("isTouching");
-            StartCoroutine(DelayTai());
+            //StartCoroutine(DelayTai());
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -31,7 +31,7 @@ public class ProjectileExplode : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {
             anim.SetTrigger("isTouching");
-            StartCoroutine(DelayTai());
+            //StartCoroutine(DelayTai());
         }
     }
     private IEnumerator DelayTai() 
