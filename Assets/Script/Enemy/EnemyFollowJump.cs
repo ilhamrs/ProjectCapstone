@@ -3,10 +3,9 @@ using System.Data;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class EnemyFollow : MonoBehaviour
+public class EnemyFollowJump : MonoBehaviour
 {
-    [SerializeField]
+   [SerializeField]
     public Transform player;
     public Transform Skeleton;
     public Transform enemy;
@@ -77,19 +76,19 @@ public class EnemyFollow : MonoBehaviour
         reset.active();
         if (transform.position.x < player.position.x)
         {
-            rb.velocity = new Vector2(speed, 0);
+            // rb.velocity = new Vector2(speed, 0);
             transform.localScale = new Vector2(1, 1);
 
-            // transform.position = new Vector2(transform.position.x + speed/3 * Time.deltaTime, player.position.y - jumpdog);
+            transform.position = new Vector2(transform.position.x + speed/3 * Time.deltaTime, player.position.y - jumpdog);
         }
         
         
         else 
         {
-            rb.velocity = new Vector2(-speed, 0);
+            // rb.velocity = new Vector2(-speed, 0);
             transform.localScale = new Vector2(-1, 1);
 
-            // transform.position = new Vector2(transform.position.x - speed/3 * Time.deltaTime, player.position.y -jumpdog);
+            transform.position = new Vector2(transform.position.x - speed/3 * Time.deltaTime, player.position.y -jumpdog);
         }
     }
 

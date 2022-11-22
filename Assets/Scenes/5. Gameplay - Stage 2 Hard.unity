@@ -28315,6 +28315,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1610109026}
   Skeleton: {fileID: 204752547}
+  enemy: {fileID: 0}
   revisi: {fileID: 1925897337}
   trapObject: {fileID: 959629352}
   triggerTrap: {fileID: 914638422}
@@ -28323,6 +28324,7 @@ MonoBehaviour:
   anim: {fileID: 959629360}
   Range: 10
   speed: 30
+  jumpdog: 0.46
   reset: {fileID: 1674048030}
 --- !u!114 &959629362
 MonoBehaviour:
@@ -36593,7 +36595,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1220964385
 Transform:
   m_ObjectHideFlags: 0
@@ -38309,7 +38311,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1282564471
 Transform:
   m_ObjectHideFlags: 0
@@ -47876,7 +47878,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1610109017}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.8899988, y: -0.2, z: 0}
+  m_LocalPosition: {x: 0.04, y: 0.22, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1330592639}
@@ -63663,7 +63665,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &6903364503126643502
 Animator:
   serializedVersion: 3
