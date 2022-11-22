@@ -3009,7 +3009,6 @@ MonoBehaviour:
   trapObject: {fileID: 139635695}
   triggerTrap: {fileID: 1703994769}
   boxCollider2D: {fileID: 139635696}
-  sfxDog: {fileID: 0}
   anim: {fileID: 139635701}
   Range: 30
   speed: 40
@@ -17455,7 +17454,6 @@ MonoBehaviour:
   trapObject: {fileID: 959629352}
   triggerTrap: {fileID: 914638422}
   boxCollider2D: {fileID: 959629357}
-  sfxDog: {fileID: 0}
   anim: {fileID: 959629360}
   Range: 10
   speed: 30
@@ -18951,7 +18949,6 @@ MonoBehaviour:
   trapObject: {fileID: 1021284678}
   triggerTrap: {fileID: 914638422}
   boxCollider2D: {fileID: 1021284686}
-  sfxDog: {fileID: 0}
   anim: {fileID: 1021284684}
   Range: 10
   speed: 5
@@ -33617,7 +33614,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1946436590
 Transform:
   m_ObjectHideFlags: 0
