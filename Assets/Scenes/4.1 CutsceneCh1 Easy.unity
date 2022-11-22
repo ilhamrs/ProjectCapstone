@@ -794,7 +794,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33d7cf36aaca1be49ab8ed6f521e686a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetScene: 5. Gameplay
+  TargetScene: 5. Gameplay - Stage 1 Easy
 --- !u!114 &387952349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2409,7 +2409,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c51bbb405ec26d47bcde4e6d2000691, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetScene: 5. Gameplay_backup
+  TargetScene: 5. Gameplay - Stage 1 Easy
 --- !u!4 &1467116128
 Transform:
   m_ObjectHideFlags: 0
@@ -3756,7 +3756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99e563c88797d6748a3759c4e6a2a451, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetScene: 5. Gameplay
+  TargetScene: 5. Gameplay - Stage 1 Easy
   Delay: 73
 --- !u!4 &2046725894
 Transform:
