@@ -56936,7 +56936,7 @@ MonoBehaviour:
   Range: 10
   speed: 30
   jumpdog: 0
-  reset: {fileID: 0}
+  reset: {fileID: 1674048030}
 --- !u!50 &1937278164
 Rigidbody2D:
   serializedVersion: 4
