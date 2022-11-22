@@ -37,11 +37,12 @@ public class ChapterSelectionManager : MonoBehaviour
     {
         dataChapOne = ChapterOneSaveSystem.LoadGame("chapOne");
         dataChapTwo = ChapterOneSaveSystem.LoadGame("chapTwo");
-        dataChapThree = ChapterOneSaveSystem.LoadGame("chapThree");
+        //dataChapThree = ChapterOneSaveSystem.LoadGame("chapThree");
 
         CheckGrade(dataChapOne, chapOneTime, chapOneRevision, chapOneGrade);
-        CheckGrade(dataChapTwo, chapTwoTime, chapTwoRevision, chapTwoGrade);
-        CheckGrade(dataChapThree, chapThreeTime, chapThreeRevision, chapThreeGrade);
+
+        CheckPrevChap(dataChapOne, dataChapTwo, chapTwoTime, chapTwoRevision, chapTwoGrade);
+        //CheckGrade(dataChapThree, chapThreeTime, chapThreeRevision, chapThreeGrade);
 
 
 
@@ -89,6 +90,19 @@ public class ChapterSelectionManager : MonoBehaviour
             }
         }
         
+    }
+
+    void CheckPrevChap(ChapterData prevDataChap, ChapterData dataChap, TextMeshProUGUI chapTime, TextMeshProUGUI chapRevision, GameObject chapGrade)
+    {
+        if (!prevDataChap.Equals(null))
+        {
+            Debug.Log("ada save!");
+            CheckGrade(dataChap, chapTime, chapRevision, chapGrade);
+        }
+        else
+        {
+            Debug.Log("tidak ada save!");
+        }
     }
 
 }
