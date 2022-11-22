@@ -35,10 +35,7 @@ public class SolyoFollow : MonoBehaviour
         anim = GetComponent<Animator>();
         boxCollider2D = GetComponent<BoxCollider2D>();
 
-<<<<<<< Updated upstream
-=======
         // sfxDog.Play();
->>>>>>> Stashed changes
     }
 
     private void Awake()
