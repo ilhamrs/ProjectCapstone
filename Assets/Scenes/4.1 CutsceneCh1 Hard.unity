@@ -2409,7 +2409,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c51bbb405ec26d47bcde4e6d2000691, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetScene: 5. Gameplay_backup
+  TargetScene: 5. Gameplay - Stage 1 Hard
 --- !u!4 &1467116128
 Transform:
   m_ObjectHideFlags: 0

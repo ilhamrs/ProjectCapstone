@@ -5085,7 +5085,7 @@ Transform:
   - {fileID: 152754912}
   - {fileID: 1724861674}
   m_Father: {fileID: 1674048030}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &204752546
 GameObject:
@@ -11909,7 +11909,7 @@ Transform:
   - {fileID: 1926723386}
   - {fileID: 229674073}
   m_Father: {fileID: 1674048030}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &427141139
 Animator:
@@ -12645,7 +12645,7 @@ GameObject:
   m_Component:
   - component: {fileID: 446182664}
   m_Layer: 0
-  m_Name: EnemyDog (1)
+  m_Name: EnemySolyo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12659,15 +12659,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 446182663}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.13, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.6999999, y: 0.70000005, z: 0.7}
   m_Children:
   - {fileID: 1914924734}
   - {fileID: 1255326322}
   - {fileID: 1214028808}
   - {fileID: 1466026971}
-  m_Father: {fileID: 1769128033}
-  m_RootOrder: 1
+  m_Father: {fileID: 1597450724}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &450134260
 GameObject:
@@ -19567,7 +19567,7 @@ Transform:
   - {fileID: 1717757389}
   - {fileID: 2095842314}
   m_Father: {fileID: 1674048030}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &644983799
 GameObject:
@@ -25258,7 +25258,7 @@ Transform:
   - {fileID: 1396784491}
   - {fileID: 1107110848}
   m_Father: {fileID: 1674048030}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &852457242
 GameObject:
@@ -36734,7 +36734,7 @@ Transform:
   - {fileID: 1286677593}
   - {fileID: 1227815885}
   m_Father: {fileID: 1674048030}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1221950214
 GameObject:
@@ -37909,7 +37909,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &1255326314
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -37927,7 +37927,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.125, y: 3.125}
+    oldSize: {x: 5.5555553, y: 6}
     newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -37960,7 +37960,7 @@ Animator:
   m_GameObject: {fileID: 1255326313}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 379a045737456534aabc6f3074d81fff, type: 2}
+  m_Controller: {fileID: 9100000, guid: 246e025e63431d447905320cfff82cc0, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -38042,7 +38042,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.125, y: 3.125}
+    oldSize: {x: 5.5555553, y: 6}
     newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -38091,9 +38091,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 66f3d847496a9654aabc481a6cd912e2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c4116bbca4f7ae14d880a58634600d93, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 2}
@@ -38110,7 +38110,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1255326313}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.64, y: -0.24, z: 0}
+  m_LocalPosition: {x: 3.64, y: 1.68, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 446182664}
@@ -47475,6 +47475,37 @@ Transform:
   m_Father: {fileID: 231156043}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1597450723
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1597450724}
+  m_Layer: 0
+  m_Name: Solyo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1597450724
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1597450723}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6.94, y: -28.239998, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 446182664}
+  m_Father: {fileID: 1674048030}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1600212947
 GameObject:
   m_ObjectHideFlags: 0
@@ -50033,6 +50064,7 @@ Transform:
   m_Children:
   - {fileID: 6903364503126643500}
   - {fileID: 1282564471}
+  - {fileID: 1597450724}
   - {fileID: 1769128033}
   - {fileID: 1220964385}
   - {fileID: 2096126666}
@@ -53232,7 +53264,7 @@ Transform:
   - {fileID: 268956514}
   - {fileID: 509203757}
   m_Father: {fileID: 1674048030}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1759834207
 Animator:
@@ -53630,9 +53662,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1664644045}
-  - {fileID: 446182664}
   m_Father: {fileID: 1674048030}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1772342405
 GameObject:
@@ -56642,7 +56673,7 @@ GameObject:
   - component: {fileID: 1914924732}
   - component: {fileID: 1914924731}
   m_Layer: 0
-  m_Name: EnemyDogTrigger
+  m_Name: EnemySolyoTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59834,7 +59865,7 @@ Transform:
   - {fileID: 912068783}
   - {fileID: 1710978872}
   m_Father: {fileID: 1674048030}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2016635183
 GameObject:
@@ -60903,7 +60934,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1674048030}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2048770331
 MonoBehaviour:
@@ -62042,7 +62073,7 @@ Transform:
   - {fileID: 1157091644}
   - {fileID: 1008653838}
   m_Father: {fileID: 1674048030}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2099682270
 GameObject:
