@@ -19,11 +19,15 @@ public class ChapterSelectionHard : MonoBehaviour
     [SerializeField] GameObject chapOneHardGrade;
 
     [Header("Chapter Two Hard")]
+    [SerializeField] GameObject chapTwoHardButton;
+    [SerializeField] Sprite chapTwoHardUnlock;
     [SerializeField] TextMeshProUGUI chapTwoHardTime;
     [SerializeField] TextMeshProUGUI chapTwoHardRevision;
     [SerializeField] GameObject chapTwoHardGrade;
 
     [Header("Chapter Three Hard")]
+    [SerializeField] GameObject chapThreeHardButton;
+    [SerializeField] Sprite chapThreeHardUnlock;
     [SerializeField] TextMeshProUGUI chapThreeHardTime;
     [SerializeField] TextMeshProUGUI chapThreeHardRevision;
     [SerializeField] GameObject chapThreeHardGrade;
@@ -37,12 +41,13 @@ public class ChapterSelectionHard : MonoBehaviour
     void Start()
     {
         dataChapOneHard = ChapterOneSaveSystem.LoadGame("chapOneHard");
-        //dataChapTwoHard = ChapterOneSaveSystem.LoadGame("chapTwoHard");
-        //dataChapThreeHard = ChapterOneSaveSystem.LoadGame("chapThreeHard");
+        dataChapTwoHard = ChapterOneSaveSystem.LoadGame("chapTwoHard");
+        dataChapThreeHard = ChapterOneSaveSystem.LoadGame("chapThreeHard");
 
         CheckGrade(dataChapOneHard, chapOneHardTime, chapOneHardRevision, chapOneHardGrade);
-        //CheckGrade(dataChapTwoHard, chapTwoHardTime, chapTwoHardRevision, chapTwoHardGrade);
-        //CheckGrade(dataChapThreeHard, chapThreeHardTime, chapThreeHardRevision, chapThreeHardGrade);
+
+        CheckPrevChap(dataChapOneHard, dataChapTwoHard, chapTwoHardTime, chapTwoHardRevision, chapTwoHardGrade, chapTwoHardButton, chapTwoHardUnlock);
+        CheckPrevChap(dataChapTwoHard, dataChapThreeHard, chapThreeHardTime, chapThreeHardRevision, chapThreeHardGrade, chapThreeHardButton, chapThreeHardUnlock);
 
 
     }
@@ -89,6 +94,23 @@ public class ChapterSelectionHard : MonoBehaviour
             }
         }
 
+    }
+
+    void CheckPrevChap(ChapterData prevDataChap, ChapterData dataChap, TextMeshProUGUI chapTime, TextMeshProUGUI chapRevision, GameObject chapGrade, GameObject chapButton, Sprite chapImageUnlock)
+    {
+        if (prevDataChap.Equals(null))
+        {
+            Debug.Log("tidak ada save!");
+            chapButton.GetComponent<Button>().interactable = false;
+
+        }
+        else
+        {
+            Debug.Log("ada save!");
+            chapButton.GetComponent<Button>().interactable = true;
+            chapButton.GetComponent<Image>().sprite = chapImageUnlock;
+            CheckGrade(dataChap, chapTime, chapRevision, chapGrade);
+        }
     }
 
 }

@@ -26,6 +26,8 @@ public class ChapterSelectionManager : MonoBehaviour
     [SerializeField] GameObject chapTwoGrade;
 
     [Header("Chapter Three")]
+    [SerializeField] GameObject chapThreeButton;
+    [SerializeField] Sprite chapThreeUnlock;
     [SerializeField] TextMeshProUGUI chapThreeTime;
     [SerializeField] TextMeshProUGUI chapThreeRevision;
     [SerializeField] GameObject chapThreeGrade;
@@ -39,12 +41,12 @@ public class ChapterSelectionManager : MonoBehaviour
     {
         dataChapOne = ChapterOneSaveSystem.LoadGame("chapOne");
         dataChapTwo = ChapterOneSaveSystem.LoadGame("chapTwo");
-        //dataChapThree = ChapterOneSaveSystem.LoadGame("chapThree");
+        dataChapThree = ChapterOneSaveSystem.LoadGame("chapThree");
 
         CheckGrade(dataChapOne, chapOneTime, chapOneRevision, chapOneGrade);
 
         CheckPrevChap(dataChapOne, dataChapTwo, chapTwoTime, chapTwoRevision, chapTwoGrade, chapTwoButton, chapTwoUnlock);
-        //CheckGrade(dataChapThree, chapThreeTime, chapThreeRevision, chapThreeGrade);
+        CheckPrevChap(dataChapTwo, dataChapThree, chapThreeTime, chapThreeRevision, chapThreeGrade, chapThreeButton, chapThreeUnlock);
 
 
 
