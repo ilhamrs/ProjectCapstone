@@ -38,12 +38,12 @@ public class ChapterSelectionManager : MonoBehaviour
         }
         else
         {
-            float minutes = Mathf.FloorToInt(dataChapOne.time / 60);
-            float seconds = Mathf.FloorToInt(dataChapOne.time % 60);
+            //float minutes = Mathf.FloorToInt(dataChapOne.time / 60);
+            //float seconds = Mathf.FloorToInt(dataChapOne.time % 60);
 
-            chapOneTime.text = string.Format("{0:00}:{1:00}", minutes, seconds);
-            chapOneRevision.text = dataChapOne.jmlRevisi.ToString();
-            CheckGrade();
+            //chapOneTime.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+            //chapOneRevision.text = dataChapOne.jmlRevisi.ToString();
+            CheckGrade(dataChapOne, chapOneTime, chapOneRevision, chapOneGrade);
 
         }
 
@@ -55,12 +55,12 @@ public class ChapterSelectionManager : MonoBehaviour
         }
         else
         {
-            float minutes = Mathf.FloorToInt(dataChapOneHard.time / 60);
-            float seconds = Mathf.FloorToInt(dataChapOneHard.time % 60);
+            //float minutes = Mathf.FloorToInt(dataChapOneHard.time / 60);
+            //float seconds = Mathf.FloorToInt(dataChapOneHard.time % 60);
 
-            chapOneHardTime.text = string.Format("{0:00}:{1:00}", minutes, seconds);
-            chapOneHardRevision.text = dataChapOneHard.jmlRevisi.ToString();
-            CheckGradeHard();
+            //chapOneHardTime.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+            //chapOneHardRevision.text = dataChapOneHard.jmlRevisi.ToString();
+            CheckGrade(dataChapOneHard, chapOneHardTime, chapOneHardRevision, chapOneHardGrade);
 
         }
     }
@@ -71,57 +71,63 @@ public class ChapterSelectionManager : MonoBehaviour
         
     }
 
-    void CheckGrade()
+    void CheckGrade(ChapterData dataChap, TextMeshProUGUI chapTime, TextMeshProUGUI chapRevision, GameObject chapGrade)
     {
-        if (dataChapOne.time <= 0 && dataChapOne.jmlRevisi <= 0)
+        float minutes = Mathf.FloorToInt(dataChap.time / 60);
+        float seconds = Mathf.FloorToInt(dataChap.time % 60);
+
+        chapTime.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        chapRevision.text = dataChap.jmlRevisi.ToString();
+
+        if (dataChap.time <= 0 && dataChap.jmlRevisi <= 0)
         {
-            chapOneGrade.SetActive(false);
+            chapGrade.SetActive(false);
         }
         else
         {
-            chapOneGrade.SetActive(true);
-            if(dataChapOne.jmlRevisi < 10)
+            chapGrade.SetActive(true);
+            if(dataChap.jmlRevisi < 10)
             {
-                chapOneGrade.GetComponent<Image>().sprite = AGrade;
-            } else if(dataChapOne.jmlRevisi < 20)
+                chapGrade.GetComponent<Image>().sprite = AGrade;
+            } else if(dataChap.jmlRevisi < 20)
             {
-                chapOneGrade.GetComponent<Image>().sprite = BGrade;
-            } else if (dataChapOne.jmlRevisi < 30)
+                chapGrade.GetComponent<Image>().sprite = BGrade;
+            } else if (dataChap.jmlRevisi < 30)
             {
-                chapOneGrade.GetComponent<Image>().sprite = CGrade;
+                chapGrade.GetComponent<Image>().sprite = CGrade;
             }
             else
             {
-                chapOneGrade.GetComponent<Image>().sprite = EGrade;
+                chapGrade.GetComponent<Image>().sprite = EGrade;
             }
         }
     }
 
-    void CheckGradeHard()
-    {
-        if (dataChapOneHard.time <= 0 && dataChapOneHard.jmlRevisi <= 0)
-        {
-            chapOneHardGrade.SetActive(false);
-        }
-        else
-        {
-            chapOneHardGrade.SetActive(true);
-            if (dataChapOneHard.jmlRevisi < 10)
-            {
-                chapOneHardGrade.GetComponent<Image>().sprite = AGrade;
-            }
-            else if (dataChapOneHard.jmlRevisi < 20)
-            {
-                chapOneHardGrade.GetComponent<Image>().sprite = BGrade;
-            }
-            else if (dataChapOneHard.jmlRevisi < 30)
-            {
-                chapOneHardGrade.GetComponent<Image>().sprite = CGrade;
-            }
-            else
-            {
-                chapOneHardGrade.GetComponent<Image>().sprite = EGrade;
-            }
-        }
-    }
+    //void CheckGradeHard()
+    //{
+    //    if (dataChapOneHard.time <= 0 && dataChapOneHard.jmlRevisi <= 0)
+    //    {
+    //        chapOneHardGrade.SetActive(false);
+    //    }
+    //    else
+    //    {
+    //        chapOneHardGrade.SetActive(true);
+    //        if (dataChapOneHard.jmlRevisi < 10)
+    //        {
+    //            chapOneHardGrade.GetComponent<Image>().sprite = AGrade;
+    //        }
+    //        else if (dataChapOneHard.jmlRevisi < 20)
+    //        {
+    //            chapOneHardGrade.GetComponent<Image>().sprite = BGrade;
+    //        }
+    //        else if (dataChapOneHard.jmlRevisi < 30)
+    //        {
+    //            chapOneHardGrade.GetComponent<Image>().sprite = CGrade;
+    //        }
+    //        else
+    //        {
+    //            chapOneHardGrade.GetComponent<Image>().sprite = EGrade;
+    //        }
+    //    }
+    //}
 }
