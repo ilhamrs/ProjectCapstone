@@ -4264,6 +4264,7 @@ GameObject:
   - component: {fileID: 204752547}
   - component: {fileID: 204752548}
   - component: {fileID: 204752549}
+  - component: {fileID: 204752550}
   m_Layer: 0
   m_Name: Kerumunan
   m_TagString: Skeleton
@@ -4279,7 +4280,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 204752546}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.63, y: -0.8, z: 0}
+  m_LocalPosition: {x: -18.7, y: 1.81, z: 0}
   m_LocalScale: {x: 0.7142858, y: 0.7142856, z: 0.71428573}
   m_Children: []
   m_Father: {fileID: 1664644045}
@@ -4349,19 +4350,38 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.010482788, y: -0.09242582}
+  m_Offset: {x: 0.010482788, y: -1.8203759}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.5555553, y: 6}
+    oldSize: {x: 7.6923075, y: 8.307693}
     newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.0795898, y: 1.4613314}
+  m_Size: {x: 2.0795898, y: 4.9172316}
   m_EdgeRadius: 0
+--- !u!95 &204752550
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 204752546}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c317186be37003749a4d95648ab54810, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &209694838
 GameObject:
   m_ObjectHideFlags: 0
@@ -18244,6 +18264,7 @@ GameObject:
   - component: {fileID: 1005581105}
   - component: {fileID: 1005581107}
   - component: {fileID: 1005581106}
+  - component: {fileID: 1005581108}
   m_Layer: 0
   m_Name: Kerumunan
   m_TagString: Skeleton
@@ -18259,7 +18280,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1005581104}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.63, y: -0.8, z: 0}
+  m_LocalPosition: {x: -16.63, y: 2.04, z: 0}
   m_LocalScale: {x: 0.7142858, y: 0.7142856, z: 0.71428573}
   m_Children: []
   m_Father: {fileID: 831540377}
@@ -18278,18 +18299,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.010482788, y: -0.09242582}
+  m_Offset: {x: 0.010482788, y: -1.6443658}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.125, y: 3.125}
+    oldSize: {x: 7.6923075, y: 8.307693}
     newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.0795898, y: 1.4613314}
+  m_Size: {x: 2.0795898, y: 4.5652113}
   m_EdgeRadius: 0
 --- !u!212 &1005581107
 SpriteRenderer:
@@ -18331,7 +18352,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9d9163be2b764294cb15749755e2d152, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 268167678bfe2f843ac992c0927830c7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -18342,6 +18363,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1005581108
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005581104}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c317186be37003749a4d95648ab54810, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1008500859
 GameObject:
   m_ObjectHideFlags: 0
