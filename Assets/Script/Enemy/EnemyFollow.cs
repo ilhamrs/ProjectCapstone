@@ -114,7 +114,7 @@ public class EnemyFollow : MonoBehaviour
         {
             anim.SetTrigger("Take");
             getBone = true;
-            //boxCollider2D.enabled = false;
+            boxCollider2D.enabled = false;
         }
     }
 
