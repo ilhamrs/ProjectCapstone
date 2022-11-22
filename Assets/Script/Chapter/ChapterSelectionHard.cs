@@ -37,12 +37,12 @@ public class ChapterSelectionHard : MonoBehaviour
     void Start()
     {
         dataChapOneHard = ChapterOneSaveSystem.LoadGame("chapOneHard");
-        dataChapTwoHard = ChapterOneSaveSystem.LoadGame("chapTwoHard");
-        dataChapThreeHard = ChapterOneSaveSystem.LoadGame("chapThreeHard");
+        //dataChapTwoHard = ChapterOneSaveSystem.LoadGame("chapTwoHard");
+        //dataChapThreeHard = ChapterOneSaveSystem.LoadGame("chapThreeHard");
 
         CheckGrade(dataChapOneHard, chapOneHardTime, chapOneHardRevision, chapOneHardGrade);
-        CheckGrade(dataChapTwoHard, chapTwoHardTime, chapTwoHardRevision, chapTwoHardGrade);
-        CheckGrade(dataChapThreeHard, chapThreeHardTime, chapThreeHardRevision, chapThreeHardGrade);
+        //CheckGrade(dataChapTwoHard, chapTwoHardTime, chapTwoHardRevision, chapTwoHardGrade);
+        //CheckGrade(dataChapThreeHard, chapThreeHardTime, chapThreeHardRevision, chapThreeHardGrade);
 
 
     }
