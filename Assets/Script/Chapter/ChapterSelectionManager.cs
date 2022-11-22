@@ -19,6 +19,8 @@ public class ChapterSelectionManager : MonoBehaviour
     [SerializeField] GameObject chapOneGrade;
 
     [Header("Chapter Two")]
+    [SerializeField] GameObject chapTwoButton;
+    [SerializeField] Sprite chapTwoUnlock;
     [SerializeField] TextMeshProUGUI chapTwoTime;
     [SerializeField] TextMeshProUGUI chapTwoRevision;
     [SerializeField] GameObject chapTwoGrade;
@@ -41,7 +43,7 @@ public class ChapterSelectionManager : MonoBehaviour
 
         CheckGrade(dataChapOne, chapOneTime, chapOneRevision, chapOneGrade);
 
-        CheckPrevChap(dataChapOne, dataChapTwo, chapTwoTime, chapTwoRevision, chapTwoGrade);
+        CheckPrevChap(dataChapOne, dataChapTwo, chapTwoTime, chapTwoRevision, chapTwoGrade, chapTwoButton, chapTwoUnlock);
         //CheckGrade(dataChapThree, chapThreeTime, chapThreeRevision, chapThreeGrade);
 
 
@@ -92,16 +94,20 @@ public class ChapterSelectionManager : MonoBehaviour
         
     }
 
-    void CheckPrevChap(ChapterData prevDataChap, ChapterData dataChap, TextMeshProUGUI chapTime, TextMeshProUGUI chapRevision, GameObject chapGrade)
+    void CheckPrevChap(ChapterData prevDataChap, ChapterData dataChap, TextMeshProUGUI chapTime, TextMeshProUGUI chapRevision, GameObject chapGrade, GameObject chapButton, Sprite chapImageUnlock)
     {
-        if (!prevDataChap.Equals(null))
+        if (prevDataChap.Equals(null))
         {
-            Debug.Log("ada save!");
-            CheckGrade(dataChap, chapTime, chapRevision, chapGrade);
+            Debug.Log("tidak ada save!");
+            chapButton.GetComponent<Button>().interactable = false;
+
         }
         else
         {
-            Debug.Log("tidak ada save!");
+            Debug.Log("ada save!");
+            chapButton.GetComponent<Button>().interactable = true;
+            chapButton.GetComponent<Image>().sprite = chapImageUnlock;
+            CheckGrade(dataChap, chapTime, chapRevision, chapGrade);
         }
     }
 
