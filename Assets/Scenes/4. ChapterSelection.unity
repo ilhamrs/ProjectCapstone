@@ -14908,6 +14908,7 @@ GameObject:
   - component: {fileID: 1747233369}
   - component: {fileID: 1747233368}
   - component: {fileID: 1747233370}
+  - component: {fileID: 1747233371}
   m_Layer: 0
   m_Name: Chapter Selection Manager
   m_TagString: Untagged
@@ -14934,9 +14935,12 @@ MonoBehaviour:
   chapOneTime: {fileID: 1162953578}
   chapOneRevision: {fileID: 1947171961}
   chapOneGrade: {fileID: 2119691434}
-  chapOneHardTime: {fileID: 2146539497}
-  chapOneHardRevision: {fileID: 749204907}
-  chapOneHardGrade: {fileID: 298382380}
+  chapTwoTime: {fileID: 0}
+  chapTwoRevision: {fileID: 0}
+  chapTwoGrade: {fileID: 0}
+  chapThreeTime: {fileID: 0}
+  chapThreeRevision: {fileID: 0}
+  chapThreeGrade: {fileID: 0}
 --- !u!4 &1747233369
 Transform:
   m_ObjectHideFlags: 0
@@ -14963,6 +14967,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 957f0974a0cd8a647a63590aef9d9f27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1747233371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1747233367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 266021becc62564419cbaa6bb0d800a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AGrade: {fileID: 21300000, guid: eaa860005a7620744b00500854279bfd, type: 3}
+  BGrade: {fileID: 21300000, guid: 72a4d908379d21141b20b1e1219e9cc2, type: 3}
+  CGrade: {fileID: 21300000, guid: edc2f454d7d7c8141bd6d0145fa65217, type: 3}
+  EGrade: {fileID: 21300000, guid: 856b9fd685d557c4ab9ee1a34b31c10d, type: 3}
+  chapOneHardTime: {fileID: 2146539497}
+  chapOneHardRevision: {fileID: 749204907}
+  chapOneHardGrade: {fileID: 298382380}
+  chapTwoHardTime: {fileID: 0}
+  chapTwoHardRevision: {fileID: 0}
+  chapTwoHardGrade: {fileID: 0}
+  chapThreeHardTime: {fileID: 0}
+  chapThreeHardRevision: {fileID: 0}
+  chapThreeHardGrade: {fileID: 0}
 --- !u!1 &1750544605
 GameObject:
   m_ObjectHideFlags: 0

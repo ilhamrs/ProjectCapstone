@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine.UI;
 using System;
 
-public class ChapterSelectionManager : MonoBehaviour
+public class ChapterSelectionHard : MonoBehaviour
 {
     [Header("Grade Image")]
     [SerializeField] Sprite AGrade;
@@ -13,43 +13,43 @@ public class ChapterSelectionManager : MonoBehaviour
     [SerializeField] Sprite CGrade;
     [SerializeField] Sprite EGrade;
 
-    [Header("Chapter One")]
-    [SerializeField] TextMeshProUGUI chapOneTime;
-    [SerializeField] TextMeshProUGUI chapOneRevision;
-    [SerializeField] GameObject chapOneGrade;
+    [Header("Chapter One Hard")]
+    [SerializeField] TextMeshProUGUI chapOneHardTime;
+    [SerializeField] TextMeshProUGUI chapOneHardRevision;
+    [SerializeField] GameObject chapOneHardGrade;
 
-    [Header("Chapter Two")]
-    [SerializeField] TextMeshProUGUI chapTwoTime;
-    [SerializeField] TextMeshProUGUI chapTwoRevision;
-    [SerializeField] GameObject chapTwoGrade;
+    [Header("Chapter Two Hard")]
+    [SerializeField] TextMeshProUGUI chapTwoHardTime;
+    [SerializeField] TextMeshProUGUI chapTwoHardRevision;
+    [SerializeField] GameObject chapTwoHardGrade;
 
-    [Header("Chapter Three")]
-    [SerializeField] TextMeshProUGUI chapThreeTime;
-    [SerializeField] TextMeshProUGUI chapThreeRevision;
-    [SerializeField] GameObject chapThreeGrade;
+    [Header("Chapter Three Hard")]
+    [SerializeField] TextMeshProUGUI chapThreeHardTime;
+    [SerializeField] TextMeshProUGUI chapThreeHardRevision;
+    [SerializeField] GameObject chapThreeHardGrade;
 
-    ChapterData dataChapOne;
-    ChapterData dataChapTwo;
-    ChapterData dataChapThree;
- 
+    
+    ChapterData dataChapOneHard;
+    ChapterData dataChapTwoHard;
+    ChapterData dataChapThreeHard;
+
     // Start is called before the first frame update
     void Start()
     {
-        dataChapOne = ChapterOneSaveSystem.LoadGame("chapOne");
-        dataChapTwo = ChapterOneSaveSystem.LoadGame("chapTwo");
-        dataChapThree = ChapterOneSaveSystem.LoadGame("chapThree");
+        dataChapOneHard = ChapterOneSaveSystem.LoadGame("chapOneHard");
+        dataChapTwoHard = ChapterOneSaveSystem.LoadGame("chapTwoHard");
+        dataChapThreeHard = ChapterOneSaveSystem.LoadGame("chapThreeHard");
 
-        CheckGrade(dataChapOne, chapOneTime, chapOneRevision, chapOneGrade);
-        CheckGrade(dataChapTwo, chapTwoTime, chapTwoRevision, chapTwoGrade);
-        CheckGrade(dataChapThree, chapThreeTime, chapThreeRevision, chapThreeGrade);
-
+        CheckGrade(dataChapOneHard, chapOneHardTime, chapOneHardRevision, chapOneHardGrade);
+        CheckGrade(dataChapTwoHard, chapTwoHardTime, chapTwoHardRevision, chapTwoHardGrade);
+        CheckGrade(dataChapThreeHard, chapThreeHardTime, chapThreeHardRevision, chapThreeHardGrade);
 
 
     }
 
     void CheckGrade(ChapterData dataChap, TextMeshProUGUI chapTime, TextMeshProUGUI chapRevision, GameObject chapGrade)
     {
-        if(dataChap.Equals(null))
+        if (dataChap.Equals(null))
         {
             chapTime.text = "-";
             chapRevision.text = "-";
@@ -70,15 +70,15 @@ public class ChapterSelectionManager : MonoBehaviour
             else
             {
                 chapGrade.SetActive(true);
-                if (dataChap.jmlRevisi < 10)
+                if (dataChap.jmlRevisi < 5)
                 {
                     chapGrade.GetComponent<Image>().sprite = AGrade;
                 }
-                else if (dataChap.jmlRevisi < 20)
+                else if (dataChap.jmlRevisi < 10)
                 {
                     chapGrade.GetComponent<Image>().sprite = BGrade;
                 }
-                else if (dataChap.jmlRevisi < 30)
+                else if (dataChap.jmlRevisi < 20)
                 {
                     chapGrade.GetComponent<Image>().sprite = CGrade;
                 }
@@ -88,7 +88,7 @@ public class ChapterSelectionManager : MonoBehaviour
                 }
             }
         }
-        
+
     }
 
 }
