@@ -7856,6 +7856,18 @@ MonoBehaviour:
           m_StringArgument: Idle
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 804570480}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   DestroyTrigger: 0
 --- !u!61 &285338289
 BoxCollider2D:
@@ -25218,7 +25230,6 @@ GameObject:
   - component: {fileID: 833053397}
   - component: {fileID: 833053399}
   - component: {fileID: 833053398}
-  - component: {fileID: 833053400}
   m_Layer: 0
   m_Name: Point Lampu dan Sendal Boomerang
   m_TagString: Untagged
@@ -25278,35 +25289,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &833053400
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 833053396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29116349e00ed374e8b7524d2be744e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TagObject: Player
-  TriggerEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 833053399}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  DestroyTrigger: 0
 --- !u!1 &833962757
 GameObject:
   m_ObjectHideFlags: 0
@@ -28581,6 +28563,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1610109026}
   Skeleton: {fileID: 204752547}
+  enemy: {fileID: 0}
   revisi: {fileID: 1925897337}
   trapObject: {fileID: 959629352}
   triggerTrap: {fileID: 914638422}
@@ -28589,6 +28572,7 @@ MonoBehaviour:
   anim: {fileID: 959629360}
   Range: 10
   speed: 10
+  jumpdog: 0
   reset: {fileID: 1674048030}
 --- !u!114 &959629362
 MonoBehaviour:

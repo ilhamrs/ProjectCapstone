@@ -13,7 +13,7 @@ public class SolyoFollow : MonoBehaviour
     public GameObject triggerTrap;
     public BoxCollider2D boxCollider2D;
 
-    public AudioSource sfxDog;
+    // public AudioSource sfxDog;
     public Animator anim;
 
     [SerializeField]
@@ -35,6 +35,10 @@ public class SolyoFollow : MonoBehaviour
         anim = GetComponent<Animator>();
         boxCollider2D = GetComponent<BoxCollider2D>();
 
+<<<<<<< Updated upstream
+=======
+        // sfxDog.Play();
+>>>>>>> Stashed changes
     }
 
     private void Awake()

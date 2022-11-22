@@ -5589,7 +5589,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &230976606
 Transform:
   m_ObjectHideFlags: 0
@@ -7854,6 +7854,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Idle
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 804570480}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
   DestroyTrigger: 0
@@ -17073,7 +17085,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &566918581
 Transform:
   m_ObjectHideFlags: 0
@@ -28489,6 +28501,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1610109026}
   Skeleton: {fileID: 204752547}
+  enemy: {fileID: 0}
   revisi: {fileID: 1925897337}
   trapObject: {fileID: 959629352}
   triggerTrap: {fileID: 914638422}
@@ -28497,6 +28510,7 @@ MonoBehaviour:
   anim: {fileID: 959629360}
   Range: 10
   speed: 10
+  jumpdog: 0
   reset: {fileID: 1674048030}
 --- !u!114 &959629362
 MonoBehaviour:
@@ -43730,7 +43744,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1467803211
 Transform:
   m_ObjectHideFlags: 0
@@ -59261,7 +59275,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &2006572269
 SpriteRenderer:
   m_ObjectHideFlags: 0
