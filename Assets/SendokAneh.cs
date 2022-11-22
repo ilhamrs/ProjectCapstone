@@ -33,7 +33,7 @@ public class SendokAneh : MonoBehaviour
             if(count >= 5)
             {
                 sendokAnim.SetBool("isOpen", true);
-                StartCoroutine(Reset(10));
+                //StartCoroutine(Reset(10));
             }
         }
         
