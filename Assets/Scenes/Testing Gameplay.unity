@@ -18661,6 +18661,7 @@ MonoBehaviour:
   BGrade: {fileID: 21300000, guid: 72a4d908379d21141b20b1e1219e9cc2, type: 3}
   CGrade: {fileID: 21300000, guid: edc2f454d7d7c8141bd6d0145fa65217, type: 3}
   EGrade: {fileID: 21300000, guid: 856b9fd685d557c4ab9ee1a34b31c10d, type: 3}
+  name: chapOne
 --- !u!212 &2033960989
 SpriteRenderer:
   m_ObjectHideFlags: 0
