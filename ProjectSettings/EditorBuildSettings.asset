@@ -30,8 +30,17 @@ EditorBuildSettings:
     path: Assets/Scenes/4.1 CutsceneCh1 Hard_Backup.unity
     guid: d185f9f4b7218224d95363430b4f66a0
   - enabled: 1
-    path: Assets/Scenes/5. Gameplay - Stage 1 Hard.unity
+    path: Assets/Scenes/5. Gameplay - Stage 1 Easy.unity
     guid: 38c4e47cb28337441990f1ecf0c2b294
+  - enabled: 1
+    path: Assets/Scenes/5. Gameplay - Stage 1 Hard.unity
+    guid: 77786a771b2a6b44bb19584285d40fdf
+  - enabled: 1
+    path: Assets/Scenes/5. Gameplay - Stage 2 Easy.unity
+    guid: 21d2eaf3962b1344f84840753c1b014c
+  - enabled: 1
+    path: Assets/Scenes/5. Gameplay - Stage 2 Hard.unity
+    guid: f0244facbdbca064aba623d4e8f0b639
   - enabled: 1
     path: Assets/Scenes/5. Gameplay_backup.unity
     guid: 5a2b11ec243d5c041a1458a77cfabe46
