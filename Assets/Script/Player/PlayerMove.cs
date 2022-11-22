@@ -89,7 +89,7 @@ public class PlayerMove : MonoBehaviour
 
 	void OnCollisionEnter2D(Collision2D collisionInfo)
 	{
-		if (collisionInfo.gameObject.tag == "Ground" || collisionInfo.gameObject.tag == "Skeleton")
+		if (collisionInfo.gameObject.tag == "Ground" || collisionInfo.gameObject.tag == "Skeleton" || collisionInfo.gameObject.tag == "EnemyDog")
 		{
 			IsGrounded = true;
 		}
