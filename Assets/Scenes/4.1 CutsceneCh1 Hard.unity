@@ -794,7 +794,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33d7cf36aaca1be49ab8ed6f521e686a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetScene: 5. Gameplay
+  TargetScene: 5. Gameplay - Stage 1 Hard
 --- !u!114 &387952349
 MonoBehaviour:
   m_ObjectHideFlags: 0
