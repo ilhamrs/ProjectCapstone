@@ -3386,7 +3386,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &175513413
 Transform:
   m_ObjectHideFlags: 0
@@ -12910,8 +12910,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 651310605}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -44.21, y: 0.4, z: 48.35215}
-  m_LocalScale: {x: 1.5990704, y: 4.0680237, z: 1.4285715}
+  m_LocalPosition: {x: -44.3499, y: 0.6238, z: 48.35215}
+  m_LocalScale: {x: 1.8787479, y: 4.5155063, z: 1.4285715}
   m_Children: []
   m_Father: {fileID: 1664644045}
   m_RootOrder: 2
@@ -14418,6 +14418,7 @@ GameObject:
   - component: {fileID: 750874054}
   - component: {fileID: 750874053}
   - component: {fileID: 750874052}
+  - component: {fileID: 750874058}
   m_Layer: 0
   m_Name: sendok raksasa
   m_TagString: Untagged
@@ -14437,7 +14438,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bbb731b3e017ec4eae783a46c0f6f64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  revision: {fileID: 0}
+  revision: {fileID: 1925897337}
+  trapObject: {fileID: 750874051}
+  triggerTrap: {fileID: 1547075375}
+  reset: {fileID: 1674048030}
 --- !u!61 &750874053
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14574,6 +14578,20 @@ Transform:
   m_Father: {fileID: 1397058560}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &750874058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 750874051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 090a670a88bb5c848b35f8465b63ed1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trapObject: {fileID: 750874051}
+  triggerTrap: {fileID: 1547075375}
 --- !u!1 &752578459
 GameObject:
   m_ObjectHideFlags: 0
@@ -32011,6 +32029,7 @@ MonoBehaviour:
   - {fileID: 841795017}
   - {fileID: 1974204933}
   - {fileID: 2040243686}
+  - {fileID: 1798138532}
 --- !u!1 &1675216876
 GameObject:
   m_ObjectHideFlags: 0
@@ -34403,7 +34422,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1798138533
 Transform:
   m_ObjectHideFlags: 0
@@ -39658,8 +39677,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2080836655}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -37.4, y: 0.7561, z: 0}
-  m_LocalScale: {x: 1, y: 2.5123, z: 1}
+  m_LocalPosition: {x: -37.4, y: 0.9715, z: 0}
+  m_LocalScale: {x: 1, y: 2.9431593, z: 1}
   m_Children: []
   m_Father: {fileID: 1904694244}
   m_RootOrder: 1
