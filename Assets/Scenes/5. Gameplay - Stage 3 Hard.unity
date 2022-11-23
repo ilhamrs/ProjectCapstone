@@ -11313,7 +11313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c51bbb405ec26d47bcde4e6d2000691, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetScene: 5. Gameplay
+  TargetScene: 5. Gameplay - Stage 3 Hard
 --- !u!1 &552804800
 GameObject:
   m_ObjectHideFlags: 0
