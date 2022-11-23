@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 6857873}
   - component: {fileID: 6857872}
   m_Layer: 5
-  m_Name: Chap1Button
+  m_Name: Chap2Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1307,7 +1307,7 @@ GameObject:
   - component: {fileID: 120463931}
   - component: {fileID: 120463930}
   m_Layer: 5
-  m_Name: Chap0Button
+  m_Name: Chap1Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1594,7 +1594,7 @@ GameObject:
   - component: {fileID: 135581610}
   - component: {fileID: 135581609}
   m_Layer: 5
-  m_Name: Chap0Button
+  m_Name: Chap1Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15972,7 +15972,7 @@ GameObject:
   - component: {fileID: 1750544608}
   - component: {fileID: 1750544607}
   m_Layer: 5
-  m_Name: Chap1Button
+  m_Name: Chap2Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17168,7 +17168,7 @@ GameObject:
   - component: {fileID: 1888670594}
   - component: {fileID: 1888670593}
   m_Layer: 5
-  m_Name: Chap1Button (1)
+  m_Name: Chap3Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18865,7 +18865,7 @@ GameObject:
   - component: {fileID: 2026883063}
   - component: {fileID: 2026883062}
   m_Layer: 5
-  m_Name: Chap1Button (1)
+  m_Name: Chap3Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18954,7 +18954,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 5. Gameplay
+          m_StringArgument: 5. Gameplay - Stage 3 Hard
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2026883063
