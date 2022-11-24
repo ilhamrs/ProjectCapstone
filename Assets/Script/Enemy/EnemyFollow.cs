@@ -9,6 +9,7 @@ public class EnemyFollow : MonoBehaviour
     [SerializeField]
     public Transform player;
     public Transform Skeleton;
+    public Transform enemy;
     [SerializeField] Revisi revisi;
     public GameObject trapObject;
     public GameObject triggerTrap;
@@ -21,6 +22,7 @@ public class EnemyFollow : MonoBehaviour
     float Range;
     [SerializeField]
     float speed;
+    public float jumpdog;
 
     Vector2 originalPos;
 
@@ -77,11 +79,17 @@ public class EnemyFollow : MonoBehaviour
         {
             rb.velocity = new Vector2(speed, 0);
             transform.localScale = new Vector2(1, 1);
+
+            // transform.position = new Vector2(transform.position.x + speed/3 * Time.deltaTime, player.position.y - jumpdog);
         }
+        
+        
         else 
         {
             rb.velocity = new Vector2(-speed, 0);
             transform.localScale = new Vector2(-1, 1);
+
+            // transform.position = new Vector2(transform.position.x - speed/3 * Time.deltaTime, player.position.y -jumpdog);
         }
     }
 

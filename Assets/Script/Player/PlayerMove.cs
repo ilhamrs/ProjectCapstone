@@ -27,6 +27,8 @@ public class PlayerMove : MonoBehaviour
 	[Header("Objects")]
 	[SerializeField] GameObject player;
 	[SerializeField] RevisiPanel revisiPanel;
+	[SerializeField] RevisiPanel revisiPanelRight;
+	[SerializeField] RevisiPanel revisiPanelLeft;
 
 	[Header("Trigger Reset")]
 	[SerializeField] Transform reset;
@@ -87,7 +89,7 @@ public class PlayerMove : MonoBehaviour
 
 	void OnCollisionEnter2D(Collision2D collisionInfo)
 	{
-		if (collisionInfo.gameObject.tag == "Ground" || collisionInfo.gameObject.tag == "Skeleton")
+		if (collisionInfo.gameObject.tag == "Ground" || collisionInfo.gameObject.tag == "Skeleton" || collisionInfo.gameObject.tag == "EnemyDog")
 		{
 			IsGrounded = true;
 		}
@@ -124,6 +126,8 @@ public class PlayerMove : MonoBehaviour
 		deathSound.Play();
 		jatohSound.Play();
 		StartCoroutine(revisiPanel.showPanel());
+		StartCoroutine(revisiPanelRight.showPanel());
+		StartCoroutine(revisiPanelLeft.showPanel());
 		StartCoroutine(Respawns());
 	}
 	public void SetRespawnPoint(Vector2 position) 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using System;
 
 public class ChapterSelectionManager : MonoBehaviour
 {
@@ -17,59 +18,99 @@ public class ChapterSelectionManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI chapOneRevision;
     [SerializeField] GameObject chapOneGrade;
 
+    [Header("Chapter Two")]
+    [SerializeField] GameObject chapTwoButton;
+    [SerializeField] Sprite chapTwoUnlock;
+    [SerializeField] TextMeshProUGUI chapTwoTime;
+    [SerializeField] TextMeshProUGUI chapTwoRevision;
+    [SerializeField] GameObject chapTwoGrade;
+
+    [Header("Chapter Three")]
+    [SerializeField] GameObject chapThreeButton;
+    [SerializeField] Sprite chapThreeUnlock;
+    [SerializeField] TextMeshProUGUI chapThreeTime;
+    [SerializeField] TextMeshProUGUI chapThreeRevision;
+    [SerializeField] GameObject chapThreeGrade;
+
     ChapterData dataChapOne;
+    ChapterData dataChapTwo;
+    ChapterData dataChapThree;
+ 
     // Start is called before the first frame update
     void Start()
     {
-        dataChapOne = ChapterOneSaveSystem.LoadGame();
+        dataChapOne = ChapterOneSaveSystem.LoadGame("chapOne");
+        dataChapTwo = ChapterOneSaveSystem.LoadGame("chapTwo");
+        dataChapThree = ChapterOneSaveSystem.LoadGame("chapThree");
 
-        if (dataChapOne.Equals(null))
+        CheckGrade(dataChapOne, chapOneTime, chapOneRevision, chapOneGrade);
+
+        CheckPrevChap(dataChapOne, dataChapTwo, chapTwoTime, chapTwoRevision, chapTwoGrade, chapTwoButton, chapTwoUnlock);
+        CheckPrevChap(dataChapTwo, dataChapThree, chapThreeTime, chapThreeRevision, chapThreeGrade, chapThreeButton, chapThreeUnlock);
+
+
+
+    }
+
+    void CheckGrade(ChapterData dataChap, TextMeshProUGUI chapTime, TextMeshProUGUI chapRevision, GameObject chapGrade)
+    {
+        if(dataChap.Equals(null))
         {
-            chapOneTime.text = "-";
-            chapOneRevision.text = "-";
-            chapOneGrade.SetActive(false);
+            chapTime.text = "-";
+            chapRevision.text = "-";
+            chapGrade.SetActive(false);
         }
         else
         {
-            float minutes = Mathf.FloorToInt(dataChapOne.time / 60);
-            float seconds = Mathf.FloorToInt(dataChapOne.time % 60);
+            float minutes = Mathf.FloorToInt(dataChap.time / 60);
+            float seconds = Mathf.FloorToInt(dataChap.time % 60);
 
-            chapOneTime.text = string.Format("{0:00}:{1:00}", minutes, seconds);
-            chapOneRevision.text = dataChapOne.jmlRevisi.ToString();
-            CheckGrade();
+            chapTime.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+            chapRevision.text = dataChap.jmlRevisi.ToString();
 
-        }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    void CheckGrade()
-    {
-        if (dataChapOne.time <= 0 && dataChapOne.jmlRevisi <= 0)
-        {
-            chapOneGrade.SetActive(false);
-        }
-        else
-        {
-            chapOneGrade.SetActive(true);
-            if(dataChapOne.jmlRevisi < 10)
+            if (dataChap.time <= 0 && dataChap.jmlRevisi <= 0)
             {
-                chapOneGrade.GetComponent<Image>().sprite = AGrade;
-            } else if(dataChapOne.jmlRevisi < 20)
-            {
-                chapOneGrade.GetComponent<Image>().sprite = BGrade;
-            } else if (dataChapOne.jmlRevisi < 30)
-            {
-                chapOneGrade.GetComponent<Image>().sprite = CGrade;
+                chapGrade.SetActive(false);
             }
             else
             {
-                chapOneGrade.GetComponent<Image>().sprite = EGrade;
+                chapGrade.SetActive(true);
+                if (dataChap.jmlRevisi < 10)
+                {
+                    chapGrade.GetComponent<Image>().sprite = AGrade;
+                }
+                else if (dataChap.jmlRevisi < 20)
+                {
+                    chapGrade.GetComponent<Image>().sprite = BGrade;
+                }
+                else if (dataChap.jmlRevisi < 30)
+                {
+                    chapGrade.GetComponent<Image>().sprite = CGrade;
+                }
+                else
+                {
+                    chapGrade.GetComponent<Image>().sprite = EGrade;
+                }
             }
         }
+        
     }
+
+    void CheckPrevChap(ChapterData prevDataChap, ChapterData dataChap, TextMeshProUGUI chapTime, TextMeshProUGUI chapRevision, GameObject chapGrade, GameObject chapButton, Sprite chapImageUnlock)
+    {
+        if (prevDataChap.Equals(null))
+        {
+            Debug.Log("tidak ada save!");
+            chapButton.GetComponent<Button>().interactable = false;
+
+        }
+        else
+        {
+            Debug.Log("ada save!");
+            chapButton.GetComponent<Button>().interactable = true;
+            chapButton.GetComponent<Image>().sprite = chapImageUnlock;
+            CheckGrade(dataChap, chapTime, chapRevision, chapGrade);
+        }
+    }
+
 }

@@ -78,6 +78,7 @@ public class BurungKanan : MonoBehaviour
             revisi.getHit();
             StartCoroutine(Reset(1));
             gameObject.SetActive(false);
+            triggerTrap.SetActive(true);
         }
 
     }
