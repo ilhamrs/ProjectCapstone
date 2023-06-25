@@ -126,8 +126,8 @@ public class PlayerMove : MonoBehaviour
 		deathSound.Play();
 		jatohSound.Play();
 		StartCoroutine(revisiPanel.showPanel());
-		StartCoroutine(revisiPanelRight.showPanel());
-		StartCoroutine(revisiPanelLeft.showPanel());
+		//StartCoroutine(revisiPanelRight.showPanel());
+		//StartCoroutine(revisiPanelLeft.showPanel());
 		StartCoroutine(Respawns());
 	}
 	public void SetRespawnPoint(Vector2 position) 

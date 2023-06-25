@@ -30,6 +30,7 @@ public class Pintu : MonoBehaviour
 
     private void Awake()
     {
+        anim = GetComponent<Animator>();
         originalPos = transform.localPosition;
     }
 

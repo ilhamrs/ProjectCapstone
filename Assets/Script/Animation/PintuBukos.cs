@@ -8,6 +8,10 @@ public class PintuBukos : MonoBehaviour
     [SerializeField] private AudioSource suaraPintu;
     [SerializeField] private AudioSource suaraMarah;
     // Start is called before the first frame update
+    private void Awake()
+    {
+        anim = GetComponent<Animator>();
+    }
     void Start()
     {
         anim = GetComponent<Animator>();
