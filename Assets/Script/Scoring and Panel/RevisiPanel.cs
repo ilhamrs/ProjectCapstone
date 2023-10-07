@@ -19,12 +19,6 @@ public class RevisiPanel : MonoBehaviour
         revisiPanel.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public IEnumerator showPanel()
     {
         yield return new WaitForSeconds(0.8f);

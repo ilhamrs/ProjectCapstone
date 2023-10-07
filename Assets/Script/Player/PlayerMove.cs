@@ -33,6 +33,8 @@ public class PlayerMove : MonoBehaviour
 	[Header("Trigger Reset")]
 	[SerializeField] Transform reset;
 
+	float horiz;
+
 	private void Start()
     {
 		rb = GetComponent<Rigidbody2D>();
@@ -48,7 +50,7 @@ public class PlayerMove : MonoBehaviour
 		{
 			return;
 		}
-		float horiz = Input.GetAxis("Horizontal");
+		horiz = Input.GetAxis("Horizontal");
 		rb.velocity = new Vector2(horiz * moveSpeed, rb.velocity.y);
 
 		if (horiz > 0.0f)
@@ -79,12 +81,17 @@ public class PlayerMove : MonoBehaviour
 
 	}
 
-	private void Jump()
+	public void Jump()
 	{
 		//anim.SetTrigger("Jump");
 		rb.velocity = Vector2.up * JumpForce;
 		IsGrounded = false;
 		sfxJump.Play();
+	}
+	public void MoveHorizontal(int i)
+    {
+		horiz = i;
+		rb.velocity = new Vector2(i * moveSpeed, rb.velocity.y);
 	}
 
 	void OnCollisionEnter2D(Collision2D collisionInfo)

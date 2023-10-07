@@ -32,6 +32,9 @@ public class PauseMenuEsc : MonoBehaviour
     public void InvokeTrigger()
     {
         StartEvent.Invoke();
+        bool isActive = optionsMenu.activeSelf;
+
+        optionsMenu.SetActive(!isActive);
     }
     public void delay() 
     {
