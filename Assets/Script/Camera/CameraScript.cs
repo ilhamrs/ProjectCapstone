@@ -16,7 +16,7 @@ public class CameraScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         playerPosition = new Vector3(player.transform.position.x, transform.position.y, transform.position.z);
 
