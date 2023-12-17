@@ -10,7 +10,8 @@ public class PlayerTeleport : MonoBehaviour
 
     public void InvokeTrigger()
     {
-        TriggerEvent.Invoke();
+        if (currentTeleporter != null)
+            TriggerEvent.Invoke();
     }
 
     void Update()

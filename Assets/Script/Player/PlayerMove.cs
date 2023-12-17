@@ -34,6 +34,7 @@ public class PlayerMove : MonoBehaviour
 	[SerializeField] Transform reset;
 
 	float horiz;
+	float horizTouch;
 
 	private void Start()
     {
@@ -50,8 +51,17 @@ public class PlayerMove : MonoBehaviour
 		{
 			return;
 		}
-		horiz = Input.GetAxis("Horizontal");
-		rb.velocity = new Vector2(horiz * moveSpeed, rb.velocity.y);
+		
+		horiz = horizTouch;
+
+		if (Input.GetAxis("Horizontal") != 0)
+        {
+			horiz = Input.GetAxis("Horizontal");
+		}
+
+		//horiz = Input.GetAxis("Horizontal");
+
+		//rb.velocity = new Vector2(horiz * moveSpeed, rb.velocity.y);
 
 		if (horiz > 0.0f)
 		{
@@ -59,6 +69,7 @@ public class PlayerMove : MonoBehaviour
 			//sprite.flipX = false;
 			//anim.SetBool("goWalk", true);
 			transform.localScale = new Vector3(1, 1, 1);
+			rb.velocity = new Vector2(horiz * moveSpeed, rb.velocity.y);
 		}
 		else if (horiz < -0.01f)
 		{
@@ -66,6 +77,7 @@ public class PlayerMove : MonoBehaviour
 			//sprite.flipX = true;
 			//anim.SetBool("goWalk", true);
 			transform.localScale = new Vector3(-1, 1, 1);
+			rb.velocity = new Vector2(horiz * moveSpeed, rb.velocity.y);
 		}
 		if (Input.GetKeyDown(KeyCode.Space) && IsGrounded)
 		{
@@ -77,35 +89,60 @@ public class PlayerMove : MonoBehaviour
 		{
 			isMoving = false;
 		}
-		anim.SetBool("goWalk", horiz != 0);
+		anim.SetBool("goWalk", horiz != 0 || horizTouch != 0);
 
 	}
 
 	public void Jump()
 	{
-		//anim.SetTrigger("Jump");
-		rb.velocity = Vector2.up * JumpForce;
-		IsGrounded = false;
-		sfxJump.Play();
+        if (IsGrounded)
+        {
+			anim.SetTrigger("goJump");
+			rb.velocity = Vector2.up * JumpForce;
+			sfxJump.Play();
+			IsGrounded = false;
+			//anim.ResetTrigger("goJump");
+		}
+		
 	}
 	public void MoveHorizontal(int i)
     {
-		horiz = i;
-		rb.velocity = new Vector2(i * moveSpeed, rb.velocity.y);
+		horizTouch = i;
+		rb.velocity = new Vector2(horizTouch * moveSpeed, rb.velocity.y);
 	}
 
 	void OnCollisionEnter2D(Collision2D collisionInfo)
 	{
 		if (collisionInfo.gameObject.tag == "Ground" || collisionInfo.gameObject.tag == "Skeleton" || collisionInfo.gameObject.tag == "EnemyDog")
 		{
-			IsGrounded = true;
+			//IsGrounded = true;
 		}
 		else 
+		{
+			//IsGrounded = false;
+		}
+	}
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+		if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Skeleton") || collision.gameObject.CompareTag("EnemyDog"))
+		{
+			IsGrounded = true;
+			anim.ResetTrigger("goJump");
+		}
+		else
 		{
 			IsGrounded = false;
 		}
 	}
-	public IEnumerator Respawns() 
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+		if (collision.gameObject.CompareTag("Ground"))
+        {
+			IsGrounded = false;
+		}
+
+	}
+    public IEnumerator Respawns() 
 	{
 		yield return new WaitForSeconds(1f);
 		IsGrounded = true;

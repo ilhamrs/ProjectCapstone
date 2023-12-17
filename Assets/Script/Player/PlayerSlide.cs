@@ -56,6 +56,13 @@ public class PlayerSlide : MonoBehaviour
         StartCoroutine("stopslide");
 
     }
+    public void Slide()
+    {
+        if (playerMove.isMoving && playerMove.IsGrounded && !isSliding)
+        {
+            perfomSlide();
+        }
+    }
 
     IEnumerator stopslide() 
     {
