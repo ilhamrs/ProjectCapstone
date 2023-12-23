@@ -31244,6 +31244,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1548758948}
+  - component: {fileID: 1548758949}
   m_Layer: 0
   m_Name: CheckPoint/StartPoint
   m_TagString: Untagged
@@ -31267,6 +31268,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1548758949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1548758947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d550c1f62edffe429500a6b47e22805, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diffSelected: 0
+  easyCheckPoint:
+  - {fileID: 281814497}
+  - {fileID: 1094523232}
+  - {fileID: 120570481}
 --- !u!1 &1549340695
 GameObject:
   m_ObjectHideFlags: 0
