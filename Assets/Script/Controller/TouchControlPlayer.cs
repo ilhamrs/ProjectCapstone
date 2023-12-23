@@ -10,6 +10,21 @@ public class TouchControlPlayer : MonoBehaviour
     public PlayerTeleport playerTeleport;
     private void Awake()
     {
+        if (player == null)
+        {
+            GameObject[] g = GameObject.FindGameObjectsWithTag("Player");
+            foreach (GameObject p in g)
+            {
+                if (p.activeInHierarchy && p.GetComponent<PlayerMove>() != null)
+                {
+                    player = p;
+                    playerMove = player.GetComponent<PlayerMove>();
+                    playerSlide = player.GetComponent<PlayerSlide>();
+                    playerTeleport = player.GetComponent<PlayerTeleport>();
+                }
+            }
+        }
+
         playerMove = player.GetComponent<PlayerMove>();
         playerSlide = player.GetComponent<PlayerSlide>();
         playerTeleport = player.GetComponent<PlayerTeleport>();
