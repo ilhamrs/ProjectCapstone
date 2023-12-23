@@ -40,4 +40,12 @@ public class PauseMenuEsc : MonoBehaviour
     {
         gameObject.SetActive(true);
     }
+    public void PauseButton()
+    {
+        StartEvent.Invoke();
+        // Check whether it's active / inactive 
+        bool isActive = optionsMenu.activeSelf;
+
+        optionsMenu.SetActive(!isActive);
+    }
 }
